@@ -14,31 +14,68 @@
   <a href="../skills.html">Skills</a>
   <a href="../education.html">Education</a>
   <a href="../service/index.html">Service</a>
-  <a href="../contact.html">Contact</a>
+    <a href="../contact.html">Contact</a>
+<a
+  href="/assets/resume/Jake_Gunnell_Resume.pdf"
+  class="details-btn nav-resume-btn"
+  target="_blank"
+  rel="noopener"
+>
+  Download Résumé (PDF)
+</a>
 </header>
 
-<main class="container">
-  <h1>Algorithmic Trading Bot</h1>
-  <img src="../assets/img/projects/trading-bot/chart.png" class="detail-image">
+<main class="container project-detail">
 
-  <p class="date">2025</p>
+  <header class="project-header">
+    <h1>Algorithmic Trading Bot</h1>
+    <p class="date">2025</p>
+  </header>
 
-  <h2>Overview</h2>
-  <p>
-    Built a Python-based algorithmic trading bot that uses regression and classification machine learning models to generate trading signals.
-  </p>
+  <!-- Dashboard Screenshot -->
+  <section class="project-media">
+    <img 
+      src="../assets/img/projects/trading-bot/dashboard.png" 
+      alt="Algorithmic trading bot performance dashboard"
+      class="detail-image"
+    >
+    <p class="media-caption">
+      Real-time dashboard displaying portfolio value, open positions, and model-driven trade signals.
+    </p>
+  </section>
 
-  <h2>Key Features</h2>
-  <ul>
-    <li>ML-driven signal generation.</li>
-    <li>Backtested against historical datasets, yielding 12% portfolio return.</li>
-    <li><u>Integrated with Kraken/Coinbase APIs for live data.</u></li>
-    <li><u>Included risk management, crash detection, and performance logging.</u></li>
-  </ul>
+  <!-- Overview -->
+  <section class="project-section">
+    <h2>Overview</h2>
+    <p>
+      Built a Python-based algorithmic trading bot that generates trading signals
+      using regression and classification machine learning models. The system
+      supports both historical backtesting and live market data ingestion,
+      enabling strategy evaluation and real-time execution.
+    </p>
+  </section>
 
-  <h2>Technologies Used</h2>
-  <p>Python, Polars, Plotly, SQLite/PostgreSQL</p>
+  <!-- Key Features -->
+  <section class="project-section">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Machine learning–driven signal generation using regression and classification models.</li>
+      <li>Backtested strategies against historical datasets, achieving a 12% portfolio return.</li>
+      <li>Integrated live market data via Kraken and Coinbase APIs.</li>
+      <li>Implemented risk management, crash detection, and trade performance logging.</li>
+      <li>Built a real-time monitoring dashboard for strategy transparency.</li>
+    </ul>
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="project-section">
+    <h2>Technologies Used</h2>
+    <p>
+      Python, Polars, Plotly, SQLite, PostgreSQL
+    </p>
+  </section>
 
 </main>
+
 </body>
 </html>

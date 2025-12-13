@@ -60,7 +60,7 @@ ul {
 .primary-btn {
   display: inline-block;
   padding: 12px 22px;
-  background: #000;
+  background: white;
   color: white;
   text-decoration: none;
   margin-top: 20px;
@@ -110,5 +110,41 @@ a:hover {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
+}
+
+.project-media img,
+.media-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.media-caption,
+figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.project-section {
+  margin-top: 3rem;
+}
+.nav-resume-btn {
+  margin-left: auto;
+  margin-top: 0;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;;
 }
 
