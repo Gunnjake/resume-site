@@ -16,9 +16,8 @@ body {
 .nav-links {
   display: flex;
   gap: 1.25rem;
-  margin: 0 auto; /* THIS centers the links */
+  margin: 0 auto;
 }
-
 
 .nav a {
   text-decoration: none;
@@ -56,7 +55,8 @@ body {
   margin: 20px 0;
 }
 
-.experience-item, .project-item {
+.experience-item,
+.project-item {
   padding: 16px 0;
   border-bottom: 1px solid #eee;
 }
@@ -97,9 +97,10 @@ ul {
   background: #000;
   color: #fff;
 }
+
 /* Global link styling */
 a {
-  color: #111827; /* near-black */
+  color: #111827;
   text-decoration: none;
 }
 
@@ -142,6 +143,7 @@ figcaption {
 .project-section {
   margin-top: 3rem;
 }
+
 .nav-resume-btn {
   margin-left: auto;
   margin-top: 0;
@@ -153,7 +155,7 @@ figcaption {
   border: 1px solid #000;
   border-radius: 6px;
   text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease;;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 /* Header */
@@ -222,38 +224,30 @@ figcaption {
 .project-hero img {
   width: 100%;
   border-radius: 10px;
-  border: 1px solid #e5e7eb; /* light neutral border */
+  border: 1px solid #e5e7eb;
   background: #fff;
 }
+
+/* ============================= */
+/* PROFILE IMAGE (FIXED SECTION) */
+/* ============================= */
 
 .profile-photo {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 1.5rem;
-}
-
-.profile-photo {
-  display: flex;
-  justify-content: flex-start; /* left align */
-  margin-bottom: 1.5rem;
-}
-
-.profile-photo img {
-  width: 400px;
-  height: 400px;              /* FIXED */
-  object-fit: cover;
-  border-radius: 50%;         /* perfect circle */
-  border: 1px solid #e5e7eb;
-  background: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.profile-photo img {
-  image-rendering: auto;
-  transform: translateZ(0);
-}
-
-.profile-photo {
   margin-bottom: 2.5rem;
 }
 
+.profile-photo > img {
+  width: 400px !important;
+  height: 400px !important;
+  max-width: none !important;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: block;
+  image-rendering: auto;
+  transform: translateZ(0);
+}
