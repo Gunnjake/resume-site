@@ -226,4 +226,40 @@ figcaption {
   background: #fff;
 }
 
+.profile-photo {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: flex-start; /* left align */
+  margin-bottom: 1.5rem;
+}
+
+.profile-photo img {
+  width: 400px;
+  height: 400px;              /* FIXED */
+  object-fit: cover;
+  border-radius: 50%;         /* perfect circle */
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.profile-photo img {
+  image-rendering: auto;
+  transform: translateZ(0);
+}
+
+@media (max-width: 600px) {
+  .profile-photo img {
+    width: 180px;
+    height: 180px;
+  }
+}
+.profile-photo {
+  margin-bottom: 2.5rem;
+}
 
