@@ -251,3 +251,12 @@ figcaption {
   image-rendering: auto;
   transform: translateZ(0);
 }
+
+a.inline-link {
+  color: navy;
+  text-decoration: none;
+}
+
+a.inline-link:hover {
+  text-decoration: underline;
+}
