@@ -1,0 +1,65 @@
+{
+  "entries": [
+    {
+      "slug": "mission",
+      "title": "Volunteer Representative — Philippines",
+      "meta": "Jun 2022 – Jun 2024 · Legazpi, Philippines",
+      "summary": "Full-time international volunteer service focused on teaching, leadership, and community development.",
+      "detail": {
+        "title": "Volunteer Service",
+        "subtitle": "Leadership, teaching, and community service experience in an international setting.",
+        "sections": [
+          {
+            "title": "Volunteer Representative — Philippines",
+            "meta": "Jun 2022 – Jun 2024 · Legazpi, Philippines",
+            "paragraphs": [
+              "Served as a full-time volunteer representative in the Philippines, focusing on teaching, mentoring, and community service. The role required strong leadership, cross-cultural communication, and adaptability while working closely with local communities."
+            ],
+            "list": [
+              "Taught and mentored 10+ individuals daily in both Tagalog and English, adapting instruction to diverse cultural and educational backgrounds.",
+              "Directed and supported a team of 12 volunteer representatives, providing leadership, training, and performance feedback.",
+              "Led and participated in landscaping and cleanup service projects benefiting over 500 students and community members.",
+              "Lived with and trained groups of up to 8 volunteers at a time, providing ongoing instruction, coordination, and support."
+            ]
+          },
+          {
+            "title": "Skills & Competencies Developed",
+            "meta": "Leadership, communication, and adaptability",
+            "list": [
+              "Leadership and team management",
+              "Cross-cultural communication",
+              "Public speaking and instruction",
+              "Language fluency (Tagalog)",
+              "Problem-solving in unfamiliar environments"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "eaglescout",
+      "title": "Eagle Scout Award",
+      "meta": "Awarded Aug 20, 2019",
+      "summary": "Earned the highest rank in the Boy Scouts of America through leadership, service, and completion of a community safety project.",
+      "detail": {
+        "title": "Eagle Scout Award",
+        "subtitle": "Leadership, service, and project management achievement.",
+        "sections": [
+          {
+            "title": "Eagle Scout — Boy Scouts of America",
+            "meta": "Awarded Aug 20, 2019",
+            "paragraphs": [
+              "Earned the Eagle Scout rank, the highest achievement in the Boy Scouts of America, awarded for sustained leadership, service, and personal development. Completion required planning and leading a community service project that addressed a real-world public safety need."
+            ],
+            "list": [
+              "Planned and led a community service project to repaint faded red curbs in front of fire hydrants throughout a residential neighborhood, improving visibility and emergency access for first responders.",
+              "Coordinated volunteers, materials, and scheduling to complete the project safely and efficiently.",
+              "Worked with local guidelines to ensure markings met visibility and safety standards.",
+              "Managed project planning, execution, and final approval from proposal through completion."
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

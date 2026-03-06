@@ -1,0 +1,21 @@
+{
+  "items": [
+    { "name": "Python", "file": "python.svg", "category": "Languages", "order": 1, "description": "Primary language for data and backend services." },
+    { "name": "JavaScript", "file": "javascript.svg", "category": "Languages", "order": 2, "description": "Front-end and full-stack development." },
+    { "name": "TypeScript", "file": "typescript.svg", "category": "Languages", "order": 3, "description": "Typed JavaScript for scalable applications." },
+    { "name": "React", "file": "react.svg", "category": "Frameworks", "order": 4, "description": "UI components and single-page apps." },
+    { "name": "PostgreSQL", "file": "postgresql.svg", "category": "Databases", "order": 5, "description": "Relational database and SQL." },
+    { "name": "FastAPI", "file": "fastapi.svg", "category": "Frameworks", "description": "High-performance Python API framework." },
+    { "name": "Git", "file": "git.svg", "category": "Tools" },
+    { "name": "GitHub", "file": "github.svg", "category": "Tools" },
+    { "name": "Docker", "file": "docker.svg", "category": "Tools" },
+    { "name": "Nginx", "file": "nginx.svg", "category": "Tools" },
+    { "name": "Linux", "file": "linux.svg", "category": "Operating Systems" },
+    { "name": "Ubuntu", "file": "ubuntu.svg", "category": "Operating Systems" },
+    { "name": "Figma", "file": "figma.svg", "category": "Design" },
+    { "name": ".NET", "file": "dotnet.svg", "category": "Frameworks" },
+    { "name": "Polars", "file": "polars.svg", "category": "Data" },
+    { "name": "Cursor", "file": "cursor.svg", "category": "Tools" }
+  ]
+}
+

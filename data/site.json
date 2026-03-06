@@ -1,0 +1,43 @@
+{
+  "name": "G. Jake Gunnell",
+  "title": "Full-Stack Developer & Information Systems Student",
+  "intro": "Full-stack developer with hands-on experience building scalable production systems using Python, JavaScript, SQL, React, FastAPI, and cloud-based infrastructure. Interested in high-performance backend design, financial data pipelines, and dependable software that solves real problems.",
+  "badge": "Scrum Certified",
+  "profileImage": "assets/img/Headshot.jpg",
+  "resumePath": "assets/docs/Gunnell, Jake.pdf",
+  "email": "gunnjakeim@gmail.com",
+  "linkedIn": "https://www.linkedin.com/in/gary-jake-gunnell",
+  "linkedInLabel": "LinkedIn",
+  "featuredProjectIds": ["ella-rises", "trading-bot", "resume-website"],
+  "featuredExperienceIds": ["silver-fund"],
+  "pageSubtitles": {
+    "experience": "Professional and technical experience in software engineering and information systems.",
+    "projects": "A collection of systems, applications, and platforms I've built.",
+    "skills": "Technical skills and tools developed through coursework, internships, and production systems.",
+    "education": "Academic background in information systems, software development, and data analytics.",
+    "service": "Volunteer service and leadership experiences with long-term impact.",
+    "contact": "Ways to get in touch or learn more about my work."
+  },
+  "techStackHeading": "Tech Stack",
+  "techStackSubheading": "Languages, frameworks, and tools I use to build production systems.",
+  "exploreCards": [
+    {
+      "title": "Experience",
+      "meta": "Professional and technical experience in software engineering and information systems.",
+      "href": "experience/index.html",
+      "cta": "View Experience"
+    },
+    {
+      "title": "Projects",
+      "meta": "A collection of systems, applications, and platforms I've built.",
+      "href": "projects/index.html",
+      "cta": "View Projects"
+    },
+    {
+      "title": "Skills",
+      "meta": "Technical skills and tools developed through coursework, internships, and production systems.",
+      "href": "skills.html",
+      "cta": "View Skills"
+    }
+  ]
+}

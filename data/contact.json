@@ -1,0 +1,21 @@
+{
+  "methods": [
+    {
+      "title": "Direct Contact",
+      "meta": "Email",
+      "content": "Email:",
+      "link": { "href": "mailto:gunnjakeim@gmail.com", "text": "gunnjakeim@gmail.com" }
+    },
+    {
+      "title": "Professional Profile",
+      "meta": "Online presence",
+      "content": "LinkedIn:",
+      "link": { "href": "https://www.linkedin.com/in/gary-jake-gunnell", "text": "linkedin.com/in/gary-jake-gunnell" }
+    },
+    {
+      "title": "Résumé",
+      "content": "A full résumé is available for download in PDF format.",
+      "cta": { "text": "Download Résumé (PDF)", "hrefKey": "resumePath" }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "entries": [
+    {
+      "title": "Brigham Young University – Marriott School of Business",
+      "meta": "Bachelor of Science in Information Systems · 2024 – 2028",
+      "description": "Pursuing a Bachelor of Science in Information Systems through the Marriott School of Business, combining technical software development, data analytics, and business-focused systems design.",
+      "list": [
+        "**Program:** STEM-Certified Technical Degree",
+        "**GPA:** 3.71",
+        "**Organization:** Member, Association for Information Systems"
+      ]
+    },
+    {
+      "title": "Relevant Coursework",
+      "meta": "Information systems, analytics, and business foundations",
+      "subsections": [
+        {
+          "title": "Information Systems & Technical",
+          "list": [
+            "Business & Spreadsheet Analysis (IS 110)",
+            "Principles of Information Systems (IS 201)",
+            "Computer Programming (IS 303)",
+            "Project Management & Systems Design (IS 401)",
+            "Database Systems (IS 402)",
+            "Business Programming (IS 403)",
+            "Data Communications (IS 404)",
+            "Enterprise Application Development (IS 413)",
+            "IS Security & Controls (IS 414)"
+          ]
+        },
+        {
+          "title": "Business, Finance & Analytics",
+          "list": [
+            "Exploratory Data Analysis (IS 415)",
+            "Machine Learning (IS 455)",
+            "Introductory Statistical Analysis (STAT 121)",
+            "Principles of Accounting (ACC 201)",
+            "Principles of Finance (FIN 201)",
+            "Principles of Marketing (MKTG 201)"
+          ]
+        }
+      ]
+    }
+  ]
+}

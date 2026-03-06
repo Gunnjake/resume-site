@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects – G. Jake Gunnell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css">
-  <link rel="alternate icon" href="/assets/favicon.svg">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
@@ -16,76 +20,15 @@
   <a href="../education.html">Education</a>
   <a href="../service/index.html">Service</a>
   <a href="../contact.html">Contact</a>
+  <a href="../assets/docs/Gunnell, Jake.pdf" class="nav-resume-btn" target="_blank" rel="noopener">Download Résumé (PDF)</a>
 </header>
 
-<main class="container experience-page">
-
-  <h1>Projects</h1>
-  <p class="subtitle">
-    A collection of systems, applications, and platforms I’ve built.
-  </p>
-
-  <div class="experience-list">
-
-    <!-- Ella Rises -->
-    <div class="experience-item primary">
-      <h2>Ella Rises Nonprofit Platform (INTEX Project)</h2>
-      <p class="meta">
-        Multi-role nonprofit management platform
-      </p>
-      <p>
-        Developed a role-based system with participant and admin dashboards,
-        event registration, surveys, milestones, and administrative reporting
-        for a nonprofit organization.
-      </p>
-      <a class="details-btn" href="ella-rises.html">View Details</a>
-    </div>
-
-    <!-- Huus -->
-    <div class="experience-item">
-      <h2>Huus Cleaning Platform</h2>
-      <p class="meta">
-        Full-stack booking platform for short-term rental cleaning
-      </p>
-      <p>
-        Built using Node.js, Express, EJS, and PostgreSQL with a guided
-        multi-step booking flow, admin views, and dynamic pricing logic.
-      </p>
-      <a class="details-btn" href="huus.html">View Details</a>
-    </div>
-
-    <!-- Trading Bot -->
-    <div class="experience-item">
-      <h2>Algorithmic Trading Bot</h2>
-      <p class="meta">
-        Automated trading, backtesting, and analytics system
-      </p>
-      <p>
-        Python-based trading system supporting machine learning–driven
-        signal generation, historical backtesting, performance analytics,
-        and risk management.
-      </p>
-      <a class="details-btn" href="trading-bot.html">View Details</a>
-    </div>
-
-    <!-- Portfolio Website -->
-    <div class="experience-item">
-      <h2>Portfolio &amp; Resume Website</h2>
-      <p class="meta">
-        Personal portfolio and résumé site
-      </p>
-      <p>
-        Designed and built a clean, modular website from scratch using
-        HTML, CSS, and JavaScript to present projects and experience.
-      </p>
-      <a class="details-btn" href="resume-website.html">View Details</a>
-    </div>
-
-  </div>
-
+<main class="container">
+  <div id="content-root"><p>Loading…</p></div>
+  <footer class="footer">G. Jake Gunnell</footer>
 </main>
 
-
-
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

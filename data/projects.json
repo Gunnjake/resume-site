@@ -1,0 +1,175 @@
+{
+  "projects": [
+    {
+      "slug": "ella-rises",
+      "title": "Ella Rises Nonprofit Platform (INTEX Project)",
+      "subtitle": "Multi-role nonprofit management platform",
+      "shortDescription": "Developed a role-based system with participant and admin dashboards, event registration, surveys, milestones, and administrative reporting for a nonprofit organization.",
+      "technologies": ["Node.js", "Express", "EJS", "PostgreSQL", "AWS", "Nginx"],
+      "featured": true,
+      "year": "2025",
+      "heroImage": "assets/img/projects/ella-rises/Home.png",
+      "heroCaption": "Public-facing homepage introducing the nonprofit's mission and programs.",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Built a full-stack, multi-role web platform for the nonprofit Ella Rises as part of BYU's Information Systems INTEX project. The application supports role-based access for administrators and participants, enabling event registration, progress tracking, surveys, and administrative reporting."
+          ]
+        },
+        {
+          "title": "Platform Views",
+          "images": [
+            {
+              "src": "assets/img/projects/ella-rises/participant-dasboard.png",
+              "alt": "Participant dashboard",
+              "caption": "Participant dashboard with event registration, milestones, and survey completion."
+            },
+            {
+              "src": "assets/img/projects/ella-rises/admin-dashboard.png",
+              "alt": "Admin dashboard",
+              "caption": "Admin dashboard for viewing a analytical dashboard, managing participants, events, donations, and User Maintenance."
+            }
+          ]
+        },
+        {
+          "title": "My Contributions",
+          "list": [
+            "Built participant dashboards and event registration workflows.",
+            "Implemented multi-role authentication for administrators and participants.",
+            "Contributed to AWS RDS deployment and HTTPS setup using Nginx.",
+            "Collaborated with a team to develop surveys, milestones, and admin reporting tools."
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": ["Node.js, Express, EJS, PostgreSQL, AWS (RDS, EC2), Nginx"]
+        }
+      ]
+    },
+    {
+      "slug": "huus",
+      "title": "Huus Cleaning Platform",
+      "subtitle": "Full-stack booking platform for short-term rental cleaning",
+      "shortDescription": "Built using Node.js, Express, EJS, and PostgreSQL with a guided multi-step booking flow, admin views, and dynamic pricing logic.",
+      "technologies": ["Node.js", "Express", "EJS", "PostgreSQL", "Tailwind CSS"],
+      "featured": false,
+      "year": "2025",
+      "heroImage": "assets/img/projects/huus/hero.png",
+      "heroCaption": "Public-facing booking flow with cleaning type selection, extras, and pricing.",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Developed a full-stack booking platform for short-term rental cleaning, enabling customers to schedule services through a guided multi-step workflow while providing administrators with tools to manage bookings, pricing, and operations."
+          ]
+        },
+        {
+          "title": "Key Features",
+          "images": [
+            {
+              "src": "assets/img/projects/huus/booking-flow.png",
+              "alt": "Booking flow",
+              "caption": "Multi-step booking flow with session-based state persistence."
+            },
+            {
+              "src": "assets/img/projects/huus/admin-dasboard.png",
+              "alt": "Admin dashboard",
+              "caption": "Admin interface for viewing and managing customer bookings."
+            },
+            {
+              "src": "assets/img/projects/huus/analytics.png",
+              "alt": "Admin analytics",
+              "caption": "Administrative analytics dashboard for operational insights."
+            }
+          ]
+        },
+        {
+          "title": "Key Contributions",
+          "list": [
+            "Built routing logic for a guided, multi-step booking workflow.",
+            "Implemented session-based state to persist user selections.",
+            "Developed pricing logic for cleaning types, extras, and frequency.",
+            "Assisted with admin workflows for booking management.",
+            "Helped prepare the application for cloud deployment."
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": ["Node.js, Express, EJS, PostgreSQL, Tailwind CSS"]
+        }
+      ]
+    },
+    {
+      "slug": "trading-bot",
+      "title": "Algorithmic Trading Bot",
+      "subtitle": "Automated trading, backtesting, and analytics system",
+      "shortDescription": "Python-based trading system supporting machine learning–driven signal generation, historical backtesting, performance analytics, and risk management.",
+      "technologies": ["Python", "Polars", "Plotly", "SQLite", "PostgreSQL"],
+      "featured": true,
+      "year": "2025",
+      "heroImage": "assets/img/projects/trading-bot/dashboard.png",
+      "heroCaption": "Real-time dashboard used to monitor portfolio value, open positions, and model-driven trade signals. Balance values are hidden due to inactive market data at the time of capture.",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Built a Python-based algorithmic trading bot that generates trading signals using regression and classification machine learning models. The system supports both historical backtesting and live market data ingestion, enabling strategy evaluation and real-time execution."
+          ]
+        },
+        {
+          "title": "Key Features",
+          "list": [
+            "Machine learning–driven signal generation using regression and classification models.",
+            "Backtested strategies against historical datasets, achieving a 12% portfolio return.",
+            "Integrated live market data via Kraken and Coinbase APIs.",
+            "Implemented risk management, crash detection, and trade performance logging.",
+            "Built a real-time monitoring dashboard for strategy transparency."
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": ["Python, Polars, Plotly, SQLite, PostgreSQL"]
+        }
+      ]
+    },
+    {
+      "slug": "resume-website",
+      "title": "Portfolio & Resume Website",
+      "subtitle": "Data-driven static portfolio and résumé site",
+      "shortDescription": "A content-driven portfolio built with vanilla HTML, CSS, and JavaScript. All copy and structure are defined in JSON; a single script detects the URL, loads the right data, and renders the page—no build step.",
+      "technologies": ["HTML", "CSS", "JavaScript", "JSON", "GitHub Pages"],
+      "featured": true,
+      "year": "2025",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Designed and built a clean, minimal portfolio website to present my resume, professional experience, and technical projects. The site is fully data-driven: content lives in JSON files under data/, and a shared content script (content.js) determines the page type from the URL, fetches the appropriate JSON, and injects the rendered HTML into a single root element. Adding or editing projects, experience, skills, or service entries requires only JSON and an HTML shell file per detail page—no build or CMS."
+          ]
+        },
+        {
+          "title": "Site Structure",
+          "paragraphs": [
+            "Static HTML shells (index, experience/index, projects/index, skills, education, service/index, contact) each contain a nav, a main content root, and a footer. The script infers page type (home, list, or detail) from the path and filename. Home shows a hero (name, intro, profile image), a tech stack logo grid from techstack.json, and a Featured Experience section (one experience plus up to two projects, configured in site.json). List pages render cards from the corresponding JSON; detail pages (e.g. projects/slug.html, experience/slug.html, service/slug.html) resolve the slug from the URL, find the matching entry in JSON, and render the full detail view. All links, resume path, and featured IDs are controlled via site.json and the data README documents which file controls what."
+          ]
+        },
+        {
+          "title": "Key Features",
+          "list": [
+            "Fully data-driven: site.json, projects.json, experience.json, skills.json, techstack.json, education.json, service.json, and contact.json control all content; no content in HTML.",
+            "Single content renderer (content.js) handles home, list, and detail pages via URL-based routing and fetch of JSON.",
+            "Detail pages use one static HTML file per slug (e.g. projects/ella-rises.html); the script loads projects.json and renders the project with that slug—no build step.",
+            "Home includes a configurable tech stack grid and clickable Featured Experience cards that link to the corresponding experience or project detail pages.",
+            "Deployed as a static site on GitHub Pages with a GitHub Actions workflow and optional custom domain (CNAME).",
+            "Modular CSS (main.css, responsive.css), shared nav and footer injected from site data, and responsive layout with reveal animations."
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": ["HTML, CSS, vanilla JavaScript, JSON, GitHub Pages, GitHub Actions"]
+        }
+      ]
+    }
+  ]
+}

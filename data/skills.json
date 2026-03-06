@@ -1,0 +1,81 @@
+{
+  "tileSkills": [
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "PostgreSQL",
+    "FastAPI",
+    "Node.js",
+    "Express",
+    "AWS",
+    "Git",
+    "GitHub",
+    "Docker",
+    "Nginx",
+    "Linux",
+    "Ubuntu",
+    "Figma",
+    { "name": ".NET", "icon": "assets/img/techstack/dotnet.svg" },
+    "Polars",
+    "Cursor"
+  ],
+  "categories": [
+    {
+      "name": "Programming & Application Development",
+      "meta": "Backend, frontend, and full-stack development",
+      "description": "Strong experience building full-stack applications, APIs, and data-driven systems using modern frameworks and clean architectural patterns.",
+      "items": [
+        "**Languages:** Python, JavaScript (Node.js), SQL, HTML/CSS, Java",
+        "**Frameworks:** FastAPI, Express, Flask, React, Next.js, EJS",
+        "**Styling:** Tailwind CSS, Bootstrap"
+      ]
+    },
+    {
+      "name": "Data, Analytics & Visualization",
+      "meta": "Analytics pipelines, dashboards, and reporting",
+      "description": "Experience working with structured financial and operational data, building analytics pipelines, and presenting insights through dashboards and exports.",
+      "items": [
+        "**Data Processing:** Polars, SQL-based pipelines",
+        "**Visualization:** Plotly, Tableau, Power BI",
+        "**Analytics:** Performance metrics, time-series analysis, basic machine learning"
+      ]
+    },
+    {
+      "name": "Systems, IT & Automation",
+      "meta": "Infrastructure support and technical operations",
+      "description": "Background in systems support and infrastructure environments, with hands-on experience troubleshooting, configuring networks, and automating workflows.",
+      "items": [
+        "**Operating Systems:** Linux, Windows, macOS",
+        "**IT Skills:** System administration, network configuration, troubleshooting",
+        "**Automation:** Process automation, workflow tools (e.g., n8n)"
+      ]
+    },
+    {
+      "name": "Tools & Cloud Infrastructure",
+      "meta": "Development workflows and cloud platforms",
+      "description": "Experience working in collaborative development environments with version control, cloud infrastructure, and production deployment workflows.",
+      "items": [
+        "**Version Control:** Git, GitHub",
+        "**Cloud:** AWS (EC2, RDS, S3)",
+        "**Infrastructure:** Docker, Nginx",
+        "**Development Tools:** VS Code, Microsoft 365, Google Workspace"
+      ]
+    },
+    {
+      "name": "Languages",
+      "meta": "Spoken languages",
+      "items": [
+        "Fluent in Tagalog",
+        "Conversant in Bicolano"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Scrum Certification",
+      "meta": "Standalone credential",
+      "description": "Certified in Scrum methodology."
+    }
+  ]
+}
