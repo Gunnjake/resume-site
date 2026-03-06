@@ -544,85 +544,85 @@ a.inline-link:hover { text-decoration: underline; }
 
 /* --- Landing section (hero + Featured Experience = first screen) --- */
 .landing-section {
-  min-height: calc(100vh - 64px);
-  margin-bottom: var(--space-6);
+  min-height: 0;
+  margin-bottom: var(--space-3);
   display: flex;
   flex-direction: column;
 }
 .landing-section .hero-and-tech {
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
 }
 .landing-section .tech-stack-panel {
-  padding: var(--space-2) 0;
+  padding: var(--space-1) 0;
 }
 .landing-section .hero-and-tech .hero h1 {
-  font-size: clamp(2.25rem, 5.5vw, 3.25rem);
-  margin-bottom: var(--space-4);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin-bottom: var(--space-3);
 }
 .landing-section .hero-and-tech .hero-title {
-  font-size: 1.0625rem;
-  margin-bottom: var(--space-5);
+  font-size: 1rem;
+  margin-bottom: var(--space-4);
 }
 .landing-section .hero-and-tech .hero-description {
-  font-size: 1.0625rem;
-  line-height: 1.75;
-  margin-bottom: var(--space-6);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: var(--space-5);
   max-width: 58ch;
 }
 .landing-section .hero-and-tech .hero {
-  padding: var(--space-10) var(--space-10);
-  gap: var(--space-8);
+  padding: var(--space-8) var(--space-8);
+  gap: var(--space-6);
 }
 .landing-section .hero-and-tech .hero-image {
-  width: 240px;
-  height: 240px;
+  width: 220px;
+  height: 220px;
 }
 .landing-section .tech-stack-panel .tech-stack-grid,
 .landing-section .tech-stack-panel .tech-stack-matrix {
-  grid-template-columns: repeat(4, 86px);
-  gap: 10px;
+  grid-template-columns: repeat(4, 78px);
+  gap: 9px;
 }
 .landing-section .tech-stack-panel .tech-stack-tile {
-  width: 86px;
-  height: 86px;
+  width: 78px;
+  height: 78px;
 }
 .landing-section .tech-stack-panel .tech-stack-tile-surface {
-  padding: 12px;
+  padding: 11px;
 }
 .landing-section .tech-stack-panel .tech-stack-icon {
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
 }
 .landing-section .tech-stack-active-name {
-  font-size: 1.2rem;
-  margin-top: var(--space-4);
+  font-size: 1.05rem;
+  margin-top: var(--space-2);
   letter-spacing: 0.065em;
 }
 
 @media (min-width: 1000px) {
   .landing-section .hero-and-tech .hero {
-    padding: var(--space-12) var(--space-12) var(--space-12) var(--space-10);
-    gap: var(--space-10);
+    padding: var(--space-9) var(--space-9) var(--space-9) var(--space-8);
+    gap: var(--space-6);
   }
   .landing-section .hero-and-tech .hero-image {
-    width: 280px;
-    height: 280px;
+    width: 240px;
+    height: 240px;
   }
   .landing-section .tech-stack-panel .tech-stack-grid,
   .landing-section .tech-stack-panel .tech-stack-matrix {
-    grid-template-columns: repeat(4, 92px);
-    gap: 11px;
+    grid-template-columns: repeat(4, 82px);
+    gap: 10px;
   }
   .landing-section .tech-stack-panel .tech-stack-tile {
-    width: 92px;
-    height: 92px;
+    width: 82px;
+    height: 82px;
   }
   .landing-section .tech-stack-panel .tech-stack-tile-surface {
-    padding: 13px;
+    padding: 12px;
   }
   .landing-section .tech-stack-panel .tech-stack-icon {
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
   }
 }
 
