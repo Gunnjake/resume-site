@@ -130,14 +130,26 @@
   }
 
   function renderTechStackMatrix(stack) {
-    var items = (stack && stack.items) ? stack.items.slice() : [];
-    shuffleArray(items);
-    var html = '<div class="tech-stack-grid tech-stack-matrix reveal-stagger">';
-    items.forEach(function (item) {
+    var raw = (stack && stack.items) ? stack.items : [];
+    var items = raw.filter(function (item) {
+      var name = item && item.name ? String(item.name).trim() : '';
       var file = item && item.file ? String(item.file).trim() : '';
-      if (!file) return;
-      var name = item && item.name ? String(item.name) : '';
-      var displayName = item && item.displayName ? String(item.displayName) : name;
+      return name && file;
+    });
+    shuffleArray(items);
+    var totalCells = 20;
+    var padded = items.slice(0, totalCells);
+    while (padded.length < totalCells) { padded.push(null); }
+    var html = '<div class="tech-stack-grid tech-stack-matrix reveal-stagger">';
+    padded.forEach(function (item) {
+      if (!item) {
+        html += '<div class="tech-stack-tile tech-stack-tile-empty" aria-hidden="true">' +
+          '<div class="tech-stack-tile-surface"><div class="tech-stack-icon"></div></div></div>';
+        return;
+      }
+      var file = String(item.file).trim();
+      var name = String(item.name).trim();
+      var displayName = item.displayName ? String(item.displayName).trim() : name;
       var description = item && item.description ? String(item.description) : '';
       var iconPath = file.indexOf('/') === -1 ? ('assets/img/techstack/' + file) : file;
       var ariaLabel = description ? (displayName + ' — ' + description) : displayName;
@@ -413,21 +425,20 @@
 
   function renderContact(contact, site) {
     var resumeHref = basePath + (site.resumePath || '');
-    var html = '<div class="contact-grid reveal-stagger">';
+    var html = '<section class="contact-section"><div class="contact-grid reveal-stagger">';
     (contact.methods || []).forEach(function (m) {
-      html += '<div class="card"><h2>' + escapeHtml(m.title) + '</h2>' +
-        (m.meta ? '<p class="meta">' + escapeHtml(m.meta) + '</p>' : '');
-      if (m.content) {
-        if (m.link) {
-          html += '<p><strong>' + escapeHtml(m.content) + '</strong> <a href="' + escapeHtml(m.link.href) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(m.link.text) + '</a></p>';
-        } else {
-          html += '<p>' + escapeHtml(m.content) + '</p>';
-        }
+      html += '<div class="card contact-card">';
+      html += '<h2>' + escapeHtml(m.title) + '</h2>';
+      if (m.meta) html += '<p class="contact-card-meta">' + escapeHtml(m.meta) + '</p>';
+      if (m.link) {
+        var target = m.link.href.indexOf('mailto:') === 0 ? '' : ' target="_blank" rel="noopener noreferrer"';
+        html += '<a class="contact-link" href="' + escapeHtml(m.link.href) + '"' + target + '>' + escapeHtml(m.link.text) + '</a>';
       }
-      if (m.cta) html += '<a class="details-btn" href="' + resumeHref + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(m.cta.text) + '</a>';
+      if (m.content && !m.link) html += '<p class="contact-card-body">' + escapeHtml(m.content) + '</p>';
+      if (m.cta) html += '<a class="primary-btn contact-cta" href="' + escapeHtml(resumeHref) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(m.cta.text) + '</a>';
       html += '</div>';
     });
-    return html + '</div>';
+    return html + '</div></section>';
   }
 
   function renderPageHeader(title, subtitle) {
@@ -543,8 +554,9 @@
 
       if (page.type === 'contact') {
         fetchJSON(dataPath + 'contact.json').then(function (contactData) {
-          root.innerHTML = renderPageHeader('Contact', site.pageSubtitles && site.pageSubtitles.contact) +
-            renderContact(contactData, site);
+          root.innerHTML = '<div class="contact-page">' +
+            renderPageHeader('Contact', site.pageSubtitles && site.pageSubtitles.contact) +
+            renderContact(contactData, site) + '</div>';
           if (window.initReveal) window.initReveal();
         }).catch(function (err) { console.error(err); });
         return;

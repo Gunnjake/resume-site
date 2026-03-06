@@ -15,7 +15,11 @@
     { "name": "Figma", "file": "figma.svg", "category": "Design" },
     { "name": ".NET", "file": "dotnet.svg", "category": "Frameworks" },
     { "name": "Polars", "file": "polars.svg", "category": "Data" },
-    { "name": "Cursor", "file": "cursor.svg", "category": "Tools" }
+    { "name": "Node.js", "file": "nodejs.svg", "category": "Frameworks" },
+    { "name": "CSS", "file": "css.svg", "category": "Languages" },
+    { "name": "Vite", "file": "vite.svg", "category": "Tools" },
+    { "name": "Tailscale", "file": "tailscale.svg", "category": "Tools" },
+    { "name": "Tailwind CSS", "file": "tailwind.svg", "category": "Frameworks" }
   ]
 }
 

@@ -64,7 +64,9 @@
 
     var panel = grid.closest('.tech-stack-panel');
     var nameEl = panel ? panel.querySelector('.tech-stack-active-name') : null;
-    var tiles = Array.prototype.slice.call(grid.querySelectorAll('.tech-stack-tile'));
+    var tiles = Array.prototype.slice.call(grid.querySelectorAll('.tech-stack-tile')).filter(function (t) {
+      return !t.classList.contains('tech-stack-tile-empty');
+    });
     if (!tiles.length) return;
 
     var activeIndex = -1;
@@ -134,9 +136,10 @@
 
     observer.observe(grid);
 
-    tiles.forEach(function (tile) {
+    grid.querySelectorAll('.tech-stack-tile').forEach(function (tile) {
       tile.addEventListener('mouseenter', function () {
-        setReadout(tile.getAttribute('data-name'), true);
+        var name = tile.getAttribute('data-name');
+        setReadout(name || null, !!name);
         if (intervalId) {
           stopInterval();
           pausedByHover = true;
@@ -148,7 +151,8 @@
         if (gridInView) startInterval();
       });
       tile.addEventListener('focus', function () {
-        setReadout(tile.getAttribute('data-name'), true);
+        var name = tile.getAttribute('data-name');
+        setReadout(name || null, !!name);
         if (intervalId) {
           stopInterval();
           pausedByHover = true;
