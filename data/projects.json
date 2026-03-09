@@ -108,7 +108,7 @@
       "technologies": ["Python", "Polars", "Plotly", "SQLite", "PostgreSQL"],
       "featured": true,
       "year": "2025",
-      "heroImage": "assets/img/projects/trading-bot/dashboard.png",
+      "heroImage": "assets/img/projects/trading-bot/Dashboardv1.png",
       "heroCaption": "Real-time dashboard used to monitor portfolio value, open positions, and model-driven trade signals. Balance values are hidden due to inactive market data at the time of capture.",
       "sections": [
         {

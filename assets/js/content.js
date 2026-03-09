@@ -69,6 +69,8 @@
       var email = site.email || '';
       var linkedIn = site.linkedIn || '';
       var linkedInLabel = site.linkedInLabel || '';
+      var github = site.github || '';
+      var githubLabel = site.githubLabel || '';
       var titleLine = site.title || '';
       var resumeHref = site.resumePath ? (basePath + site.resumePath) : '';
       footer.innerHTML =
@@ -94,6 +96,7 @@
             '<div class="footer-col footer-right">' +
               (email ? '<a href="mailto:' + escapeHtml(email) + '">Email</a>' : '') +
               (linkedIn ? '<a href="' + escapeHtml(linkedIn) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(linkedInLabel || "LinkedIn") + '</a>' : '') +
+              (github ? '<a href="' + escapeHtml(github) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(githubLabel || "GitHub") + '</a>' : '') +
               (resumeHref ? '<a href="' + resumeHref + '" target="_blank" rel="noopener noreferrer">Résumé (PDF)</a>' : '') +
             '</div>' +
           '</div>' +
@@ -169,11 +172,15 @@
   }
 
   function renderHeroWithTechStack(site, stack) {
+    var heading = (site && site.techStackHeading) ? site.techStackHeading : 'Tech Stack';
     return '<section class="hero-and-tech reveal">' +
       '<div class="hero-panel">' +
       '<div class="hero-wrap">' + renderHeroInner(site) + '</div>' +
       '</div>' +
-      '<div class="tech-stack-panel">' + renderTechStackMatrix(stack) + '</div>' +
+      '<div class="tech-stack-panel">' +
+      '<h2 class="section-title tech-stack-title">' + escapeHtml(heading) + '</h2>' +
+      renderTechStackMatrix(stack) +
+      '</div>' +
       '</section>';
   }
 
@@ -368,7 +375,14 @@
       skills.certifications.forEach(function (c) {
         html += '<div class="skills-category card"><h2>' + escapeHtml(c.name) + '</h2>' +
           (c.meta ? '<p class="meta">' + escapeHtml(c.meta) + '</p>' : '') +
-          (c.description ? '<p>' + escapeHtml(c.description) + '</p>' : '') + '</div>';
+          (c.description ? '<p>' + escapeHtml(c.description) + '</p>' : '');
+        if (c.link && c.link.href) {
+          var certHref = basePath + String(c.link.href).trim();
+          var certText = c.link.text ? String(c.link.text).trim() : 'View Certificate';
+          html += '<p><a class="details-btn" href="' + escapeHtml(certHref) + '" target="_blank" rel="noopener noreferrer">' +
+            escapeHtml(certText) + '</a></p>';
+        }
+        html += '</div>';
       });
       html += '</section>';
     }

@@ -13,6 +13,12 @@
       "link": { "href": "https://www.linkedin.com/in/gary-jake-gunnell", "text": "linkedin.com/in/gary-jake-gunnell" }
     },
     {
+      "title": "GitHub",
+      "meta": "Code & projects",
+      "content": "GitHub:",
+      "link": { "href": "https://github.com/Gunnjake", "text": "github.com/Gunnjake" }
+    },
+    {
       "title": "Résumé",
       "content": "A full résumé is available for download in PDF format.",
       "cta": { "text": "Download Résumé (PDF)", "hrefKey": "resumePath" }

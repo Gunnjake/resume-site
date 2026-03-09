@@ -75,7 +75,11 @@
     {
       "name": "Scrum Certification",
       "meta": "Standalone credential",
-      "description": "Certified in Scrum methodology."
+      "description": "Certified in Scrum methodology.",
+      "link": {
+        "href": "assets/certs/scrum.pdf.pdf",
+        "text": "View Certificate (PDF)"
+      }
     }
   ]
 }

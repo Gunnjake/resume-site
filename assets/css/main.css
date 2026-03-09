@@ -503,20 +503,35 @@ a.inline-link:hover { text-decoration: underline; }
   justify-content: center;
   gap: var(--space-2);
   padding: 0;
+  text-align: center;
+}
+.hero-and-tech .tech-stack-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid var(--accent);
+  box-shadow: 0 8px 28px var(--accent-glow);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 .tech-stack-panel .tech-stack-grid,
 .tech-stack-panel .tech-stack-matrix {
   display: grid;
-  grid-template-columns: repeat(5, 78px);
-  grid-template-rows: repeat(4, 78px);
-  gap: 9px;
+  grid-template-columns: repeat(5, 68px);
+  grid-template-rows: repeat(4, 68px);
+  gap: 6px;
   width: min-content;
   max-width: 100%;
   margin: 0;
 }
 .tech-stack-panel .tech-stack-tile {
-  width: 78px;
-  height: 78px;
+  width: 68px;
+  height: 68px;
   aspect-ratio: 1;
 }
 .tech-stack-panel .tech-stack-tile-empty .tech-stack-tile-surface {
@@ -529,11 +544,11 @@ a.inline-link:hover { text-decoration: underline; }
   box-shadow: none;
 }
 .tech-stack-panel .tech-stack-tile-surface {
-  padding: 11px;
+  padding: 9px;
 }
 .tech-stack-panel .tech-stack-icon {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
 }
 .tech-stack-side {
   display: flex;
@@ -733,7 +748,7 @@ a.inline-link:hover { text-decoration: underline; }
   }
   .landing-section .tech-stack-panel {
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     padding-top: 0.5rem;
     background: none;
     border: none;
@@ -741,16 +756,16 @@ a.inline-link:hover { text-decoration: underline; }
   }
   .landing-section .tech-stack-panel .tech-stack-grid,
   .landing-section .tech-stack-panel .tech-stack-matrix {
-    grid-template-columns: repeat(5, 66px);
-    grid-template-rows: repeat(4, 66px);
-    gap: 8px;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(4, 60px);
+    gap: 6px;
   }
   .landing-section .tech-stack-panel .tech-stack-tile {
-    width: 66px;
-    height: 66px;
+    width: 60px;
+    height: 60px;
   }
   .landing-section .tech-stack-panel .tech-stack-tile-surface {
-    padding: 9px;
+    padding: 8px;
     border: 1px solid rgba(148, 163, 184, 0.28);
     background: linear-gradient(145deg, rgba(30, 41, 59, 0.75) 0%, rgba(51, 65, 85, 0.45) 100%);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -766,8 +781,8 @@ a.inline-link:hover { text-decoration: underline; }
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3), 0 0 20px rgba(99, 102, 241, 0.12);
   }
   .landing-section .tech-stack-panel .tech-stack-icon {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
   }
   .landing-section .tech-stack-active-name {
     font-size: 0.8125rem;
