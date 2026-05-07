@@ -1,13 +1,63 @@
 {
   "experiences": [
     {
+      "slug": "summit-stack-co",
+      "role": "Founder & Full Stack Developer",
+      "organization": "Summit Stack Co.",
+      "dateRange": "May 2026 – Present",
+      "location": "Remote",
+      "summary": "Independent web and software development studio focused on building modern websites, business platforms, and operational tools for small businesses and professional firms.",
+      "technologies": ["React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Vercel", "GitHub", "HTML/CSS", "Tailwind CSS"],
+      "featured": false,
+      "logoPath": "assets/img/logos/Logo%20with%20words.png",
+      "logoAlt": "Summit Stack Co. Logo",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Summit Stack Co. is an independent development studio focused on building professional websites, modern business platforms, and operational tools for small businesses and professional firms. Work includes frontend development, backend integrations, deployment infrastructure, hosting configuration, compliance implementation, and ongoing platform improvements."
+          ],
+          "overviewLink": { "url": "https://summitstackco.com/", "text": "Summit Stack Co." }
+        },
+        {
+          "title": "Services / Focus Areas",
+          "list": [
+            "Business website development",
+            "Custom frontend interfaces",
+            "Backend integrations and forms",
+            "Hosting and deployment setup",
+            "Domain and DNS configuration",
+            "Mobile responsive design",
+            "Compliance-focused implementations",
+            "Operational workflow systems"
+          ]
+        },
+        {
+          "title": "Featured Client Work",
+          "clientProjects": [
+            {
+              "title": "Guns Law Website & Compliance Platform",
+              "description": "Designed and deployed a professional law firm website with mobile-responsive layouts, contact workflows, and SMS compliance implementation support. Assisted with frontend redesigns, hosting configuration, deployment workflows, and compliance-related content integration for A2P messaging requirements.",
+              "technologies": ["Next.js", "Vercel", "HTML/CSS", "Responsive Design", "Form Integrations"],
+              "image": "assets/img/summit%20stack%20co/Gunslaw.png",
+              "link": { "href": "https://gunslaw.com/", "text": "Visit Site" }
+            }
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": ["React, Next.js, TypeScript, Supabase, PostgreSQL, Vercel, GitHub, HTML/CSS, Tailwind CSS"]
+        }
+      ]
+    },
+    {
       "slug": "silver-fund",
       "role": "Full Stack Engineer",
       "organization": "BYU Silver Fund",
       "dateRange": "Nov 2025 – Present",
       "location": "Provo, UT",
       "summary": "Maintain and extend a production-grade investment analytics platform used by student portfolio managers to evaluate performance, analyze time-series data, and support live investment decisions.",
-      "technologies": ["FastAPI", "React", "PostgreSQL", "Polars", "AWS", "AWS Amplify", "Figma"],
+      "technologies": ["FastAPI", "React", "TypeScript", "PostgreSQL", "Polars", "AWS", "AWS Amplify", "Figma"],
       "featured": true,
       "logoPath": "assets/img/logos/silverfund.png",
       "logoAlt": "Silver Fund Logo",
@@ -37,8 +87,32 @@
             "Built and enhanced dashboard features such as performance charts, data tables, filtering controls, and CSV export actions.",
             "Improved usability and clarity of investment dashboards to support faster analysis and cleaner presentation of fund performance data.",
             "Customized the AWS Amplify authentication and security interface using CSS to better match the platform’s design and improve the login and account security experience.",
-            "Leading the redesign of the platform’s user interface in Figma to create a more intuitive and user-friendly experience across investment dashboards, analytics tools, and portfolio management workflows.",
             "Implemented UI updates that aligned frontend behavior with backend data changes and new analytics features."
+          ],
+          "subsections": [
+            {
+              "title": "Platform Redesign Initiative",
+              "paragraphs": [
+                "Leading the redesign of the Silver Fund analytics platform beginning with interface planning and prototyping in Figma, followed by full frontend implementation in TypeScript and React. The redesign focuses on improving usability, visual hierarchy, responsiveness, and clarity across investment dashboards used by portfolio managers and analysts."
+              ],
+              "list": [
+                "Redesigned analytics views including performance metrics, benchmark comparisons, holdings displays, and chart layouts to create a cleaner and more intuitive fintech-style user experience.",
+                "Translated Figma prototypes into reusable production-ready React and TypeScript components while maintaining compatibility with existing backend APIs and analytics infrastructure.",
+                "Improved dashboard consistency through updated spacing systems, responsive layouts, reusable UI patterns, and enhanced data presentation for investment analysis workflows."
+              ],
+              "images": [
+                {
+                  "src": "assets/img/silverfund/oldSite/AllFunds.png",
+                  "alt": "Previous Silver Fund all funds view",
+                  "caption": "Previous platform — all funds"
+                },
+                {
+                  "src": "assets/img/silverfund/newSite/Allfunds.png",
+                  "alt": "Redesigned Silver Fund all funds view",
+                  "caption": "Redesign — all funds"
+                }
+              ]
+            }
           ]
         },
         {
@@ -52,7 +126,7 @@
         },
         {
           "title": "Technologies Used",
-          "paragraphs": ["FastAPI, React, PostgreSQL, Polars, AWS, AWS Amplify, Git, GitHub, Linux, Figma"]
+          "paragraphs": ["FastAPI, React, TypeScript, PostgreSQL, Polars, AWS, AWS Amplify, Git, GitHub, Linux, Figma"]
         }
       ]
     },

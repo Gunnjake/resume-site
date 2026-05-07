@@ -1,12 +1,65 @@
 {
   "projects": [
     {
+      "slug": "beacon-nonprofit-analytics",
+      "title": "BEACON Nonprofit Analytics Platform (INTEX Project)",
+      "subtitle": "Data-driven nonprofit operations and donor analytics",
+      "shortDescription": "Data-driven nonprofit operations and donor analytics platform focused on operational visibility, donor retention, and impact reporting.",
+      "technologies": ["React", "C#", "ASP.NET", "Supabase", "PostgreSQL", "SQL", "AWS"],
+      "featured": true,
+      "year": "2026",
+      "heroImage": "assets/img/projects/beacon/Homepage.png",
+      "heroCaption": "Public-facing homepage introducing the BEACON nonprofit analytics platform.",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Built a full-stack nonprofit analytics and operations platform as part of BYU's Information Systems INTEX project. The platform was designed to help nonprofit organizations manage operational workflows, monitor program effectiveness, and improve donor transparency through centralized dashboards, reporting tools, and data visualization."
+          ]
+        },
+        {
+          "title": "Platform Views",
+          "list": [
+            "Donor analytics dashboard — Dashboard displaying donor segmentation, retention insights, impact metrics, and organizational reporting.",
+            "Operations management dashboard — Internal dashboard for tracking case management workflows, intervention timelines, safehouse activity, and program KPIs."
+          ],
+          "images": [
+            {
+              "src": "assets/img/projects/beacon/front%20facing%20dashboard.png",
+              "alt": "BEACON donor analytics dashboard",
+              "caption": "Donor analytics dashboard with segmentation, retention insights, impact metrics, and organizational reporting."
+            },
+            {
+              "src": "assets/img/projects/beacon/Dashboard.png",
+              "alt": "BEACON operations management dashboard",
+              "caption": "Operations dashboard for case management workflows, intervention timelines, safehouse activity, and program KPIs."
+            }
+          ]
+        },
+        {
+          "title": "My Contributions",
+          "list": [
+            "Built frontend dashboards and analytics views using React.",
+            "Developed backend functionality and data integration workflows using C# and SQL.",
+            "Implemented CSV import pipelines and database integration with Supabase/PostgreSQL.",
+            "Designed KPI reporting systems for operational metrics and donor transparency.",
+            "Collaborated on UI/UX design focused on modern nonprofit reporting and data visualization.",
+            "Worked with a team to develop operational dashboards, reporting workflows, and analytics tools."
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": ["React, C# / ASP.NET, Supabase, PostgreSQL, SQL, AWS"]
+        }
+      ]
+    },
+    {
       "slug": "ella-rises",
       "title": "Ella Rises Nonprofit Platform (INTEX Project)",
       "subtitle": "Multi-role nonprofit management platform",
       "shortDescription": "Developed a role-based system with participant and admin dashboards, event registration, surveys, milestones, and administrative reporting for a nonprofit organization.",
       "technologies": ["Node.js", "Express", "EJS", "PostgreSQL", "AWS", "Nginx"],
-      "featured": true,
+      "featured": false,
       "year": "2025",
       "heroImage": "assets/img/projects/ella-rises/Home.png",
       "heroCaption": "Public-facing homepage introducing the nonprofit's mission and programs.",

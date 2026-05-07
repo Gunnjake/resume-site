@@ -331,6 +331,29 @@
     return html;
   }
 
+  function renderClientProjects(projects) {
+    var html = '<div class="client-work-grid">';
+    projects.forEach(function (proj) {
+      var media = '';
+      if (proj.image && String(proj.image).trim()) {
+        media = '<div class="client-work-media"><img src="' + basePath + proj.image + '" alt="' + escapeHtml(proj.title || 'Client project screenshot') + '"></div>';
+      } else {
+        media = '<div class="client-work-media client-work-media--placeholder"><span>Screenshot coming soon</span></div>';
+      }
+      html += '<article class="client-work-card reveal">' +
+        media +
+        '<div class="client-work-body">' +
+        '<h3>' + escapeHtml(proj.title || 'Client Project') + '</h3>' +
+        (proj.description ? '<p>' + escapeHtml(proj.description) + '</p>' : '') +
+        (proj.technologies && proj.technologies.length ? '<div class="tags">' + renderTags(proj.technologies, basePath) + '</div>' : '') +
+        (proj.link && proj.link.href
+          ? '<p><a class="details-btn" href="' + escapeHtml(proj.link.href) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(proj.link.text || 'Visit Project') + '</a></p>'
+          : '') +
+        '</div></article>';
+    });
+    return html + '</div>';
+  }
+
   function renderExperienceDetail(exp) {
     var html = '<header class="detail-page-header reveal">';
     if (exp.logoPath) html += '<img src="' + basePath + exp.logoPath + '" class="detail-logo" alt="' + escapeHtml(exp.logoAlt || exp.organization) + '">';
@@ -349,6 +372,28 @@
         html += '<ul>';
         sec.list.forEach(function (li) { html += '<li>' + escapeHtml(li) + '</li>'; });
         html += '</ul>';
+      }
+      if (sec.clientProjects && sec.clientProjects.length) {
+        html += renderClientProjects(sec.clientProjects);
+      }
+      if (sec.subsections && sec.subsections.length) {
+        sec.subsections.forEach(function (sub) {
+          if (sub.title) html += '<h3 class="experience-subsection-title">' + escapeHtml(sub.title) + '</h3>';
+          if (sub.paragraphs) sub.paragraphs.forEach(function (p) { html += '<p>' + escapeHtml(p) + '</p>'; });
+          if (sub.list) {
+            html += '<ul>';
+            sub.list.forEach(function (li) { html += '<li>' + escapeHtml(li) + '</li>'; });
+            html += '</ul>';
+          }
+          if (sub.images && sub.images.length) {
+            html += '<div class="feature-grid experience-feature-grid">';
+            sub.images.forEach(function (img) {
+              html += '<figure><img src="' + basePath + img.src + '" alt="' + escapeHtml(img.alt) + '">' +
+                (img.caption ? '<figcaption>' + escapeHtml(img.caption) + '</figcaption>' : '') + '</figure>';
+            });
+            html += '</div>';
+          }
+        });
       }
       html += '</section>';
     });
