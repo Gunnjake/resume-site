@@ -155,34 +155,93 @@
     },
     {
       "slug": "trading-bot",
-      "title": "Algorithmic Trading Bot",
-      "subtitle": "Automated trading, backtesting, and analytics system",
-      "shortDescription": "Python-based trading system supporting machine learning–driven signal generation, historical backtesting, performance analytics, and risk management.",
-      "technologies": ["Python", "Polars", "Plotly", "SQLite", "PostgreSQL"],
+      "title": "Crypto Trading Bot",
+      "subtitle": "Multi-user fintech platform for automated crypto trading",
+      "shortDescription": "Full-stack cryptocurrency trading platform with separated backend execution logic, a React/Next.js dashboard, PostgreSQL persistence, encrypted API key storage, and modular exchange adapters built for scalability and multi-exchange expansion.",
+      "technologies": ["Python", "FastAPI", "Flask", "React", "Next.js", "PostgreSQL", "REST APIs"],
       "featured": true,
-      "year": "2025",
+      "year": "2026",
       "heroImage": "assets/img/projects/trading-bot/Dashboardv1.png",
-      "heroCaption": "Real-time dashboard used to monitor portfolio value, open positions, and model-driven trade signals. Balance values are hidden due to inactive market data at the time of capture.",
+      "heroCaption": "Real-time trading dashboard for monitoring portfolio performance, positions, and strategy activity.",
       "sections": [
         {
           "title": "Overview",
           "paragraphs": [
-            "Built a Python-based algorithmic trading bot that generates trading signals using regression and classification machine learning models. The system supports both historical backtesting and live market data ingestion, enabling strategy evaluation and real-time execution."
+            "Designed and built a multi-user cryptocurrency trading platform that separates backend trading logic from the frontend dashboard. The system supports secure user onboarding, exchange connectivity, strategy execution, and operational monitoring through a modern fintech-style interface.",
+            "Architecture emphasizes modularity, security, and scalability—using PostgreSQL for persistent data, encrypted storage for user API credentials, and exchange-agnostic adapters so additional venues can be integrated without rewriting core trading workflows."
           ]
         },
         {
           "title": "Key Features",
           "list": [
-            "Machine learning–driven signal generation using regression and classification models.",
-            "Backtested strategies against historical datasets, achieving a 12% portfolio return.",
-            "Integrated live market data via Kraken and Coinbase APIs.",
-            "Implemented risk management, crash detection, and trade performance logging.",
-            "Built a real-time monitoring dashboard for strategy transparency."
+            "Multi-user platform with isolated account data and encrypted exchange API key storage.",
+            "Backend trading engine separated from the React/Next.js dashboard for cleaner service boundaries.",
+            "Exchange-agnostic design with modular adapters for connecting to different crypto venues.",
+            "Real-time dashboard for portfolio visibility, trade activity, and strategy monitoring.",
+            "Risk controls including trade sizing, profit locking, crash detection, and adaptive strategy logic.",
+            "Admin dashboard structure for platform oversight, user management, and operational visibility.",
+            "Built for future multi-exchange support, security hardening, and production-scale expansion."
+          ]
+        },
+        {
+          "title": "My Contributions",
+          "list": [
+            "Architected the full-stack platform split between backend trading services and frontend dashboard layers.",
+            "Implemented backend APIs and trading workflows using Python with Flask/FastAPI patterns.",
+            "Built dashboard interfaces in React/Next.js for real-time monitoring and user-facing controls.",
+            "Designed PostgreSQL schemas and data flows for users, strategies, trades, and platform state.",
+            "Developed exchange integration patterns with modular adapters to reduce vendor lock-in.",
+            "Implemented risk-management features including sizing rules, profit locking, and crash detection.",
+            "Established admin dashboard foundations for operational monitoring and platform governance."
           ]
         },
         {
           "title": "Technologies Used",
-          "paragraphs": ["Python, Polars, Plotly, SQLite, PostgreSQL"]
+          "paragraphs": ["Python, Flask, FastAPI, React, Next.js, PostgreSQL, REST APIs, Exchange Integrations"]
+        }
+      ]
+    },
+    {
+      "slug": "stock-trading-bot",
+      "title": "Stock Trading Bot",
+      "subtitle": "Rule-based stock automation and strategy testing platform",
+      "shortDescription": "Stock trading automation system for market data analysis, signal evaluation, and rule-based strategy execution—with risk controls, trade history tracking, and a dashboard foundation designed for future brokerage API integration.",
+      "technologies": ["Python", "FastAPI", "React", "PostgreSQL", "REST APIs", "Automation"],
+      "featured": true,
+      "year": "2026",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Built a stock trading automation system focused on analyzing market data, evaluating trading signals, and supporting rule-based trade execution in a controlled development and testing environment. The platform emphasizes strategy validation, risk management, and portfolio visibility rather than overstating production live-trading readiness.",
+            "The architecture is designed as a foundation for future brokerage API integration, with clear separation between data ingestion, strategy logic, execution workflows, and performance reporting."
+          ]
+        },
+        {
+          "title": "Key Features",
+          "list": [
+            "Market data ingestion pipelines for structured analysis and strategy inputs.",
+            "Trading signal generation and rule-based strategy evaluation workflows.",
+            "Risk management controls to constrain position sizing and trade behavior.",
+            "Trade history tracking for auditability and post-trade analysis.",
+            "Portfolio and performance dashboard structure for monitoring strategy outcomes.",
+            "Extensible design prepared for future brokerage API integration and live execution phases."
+          ]
+        },
+        {
+          "title": "My Contributions",
+          "list": [
+            "Designed backend services in Python/FastAPI for market data processing and strategy execution logic.",
+            "Implemented rule-based trading workflows with configurable strategy and risk parameters.",
+            "Built PostgreSQL-backed models for trades, positions, and performance history.",
+            "Developed React dashboard components for portfolio tracking and strategy visibility.",
+            "Integrated market data API workflows to support analysis and signal generation.",
+            "Structured the system for phased rollout from testing and simulation toward live brokerage connectivity."
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": ["Python, FastAPI, React, PostgreSQL, Market Data APIs, Automation, Trading Strategy Logic"]
         }
       ]
     },
