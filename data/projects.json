@@ -272,7 +272,7 @@
       "subtitle": "Data-driven static portfolio and résumé site",
       "shortDescription": "A content-driven portfolio built with vanilla HTML, CSS, and JavaScript. All copy and structure are defined in JSON; a single script detects the URL, loads the right data, and renders the page—no build step.",
       "technologies": ["HTML", "CSS", "JavaScript", "JSON", "GitHub Pages"],
-      "featured": true,
+      "featured": false,
       "year": "2025",
       "sections": [
         {

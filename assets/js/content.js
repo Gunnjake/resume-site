@@ -248,12 +248,15 @@
   }
 
   function renderHighlights(site, experiences, projects) {
-    var expId = (site.featuredExperienceIds || [])[0];
-    var exp = (experiences.experiences || []).find(function (e) { return e.slug === expId; });
+    var expIds = site.featuredExperienceIds || [];
+    var expList = expIds
+      .map(function (id) { return (experiences.experiences || []).find(function (e) { return e.slug === id; }); })
+      .filter(Boolean);
     var projIds = site.featuredProjectIds || [];
-    var projList = (projects.projects || []).filter(function (p) { return projIds.indexOf(p.slug) !== -1; }).slice(0, 2);
+    var maxProj = Math.max(0, 3 - expList.length);
+    var projList = (projects.projects || []).filter(function (p) { return projIds.indexOf(p.slug) !== -1; }).slice(0, maxProj);
     var html = '<section class="section highlights-section reveal"><h2 class="section-title">Featured Experience</h2><div class="grid highlights-grid reveal-stagger">';
-    if (exp) html += renderHighlightCard(exp, 'experience', basePath);
+    expList.forEach(function (e) { html += renderHighlightCard(e, 'experience', basePath); });
     projList.forEach(function (p) { html += renderHighlightCard(p, 'project', basePath); });
     return html + '</div></section>';
   }
