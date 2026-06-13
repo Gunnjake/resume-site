@@ -42,6 +42,17 @@
       ]
     },
     {
+      "name": "AI-Assisted Development",
+      "meta": "Agentic coding tools, MCP, and LLM workflows",
+      "description": "Daily use of terminal-based AI agents, the Model Context Protocol, and local LLMs to build, debug, and ship full-stack systems.",
+      "items": [
+        "**Agentic Coding:** Claude Code (terminal-based AI agent), Cursor",
+        "**MCP:** Model Context Protocol servers for connecting tools and external integrations to AI agents",
+        "**Agents & Local LLMs:** Custom agent workflows, Ollama for on-device inference (e.g., qwen2.5-coder)",
+        "**Workflow Automation:** n8n"
+      ]
+    },
+    {
       "name": "Systems, IT & Automation",
       "meta": "Infrastructure support and technical operations",
       "description": "Background in systems support and infrastructure environments, with hands-on experience troubleshooting, configuring networks, and automating workflows.",

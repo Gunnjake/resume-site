@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: letter; margin: 0.32in 0.55in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 9.5pt;
+    line-height: 1.1;
+    color: #000;
+  }
+  .name { text-align: center; font-size: 18pt; font-weight: 700; margin: 0 0 1px; letter-spacing: .3px; }
+  .contact { text-align: center; font-size: 9.2pt; margin: 0 0 4px; }
+  .summary { font-size: 9.6pt; margin: 0 0 2px; }
+  .summary b { font-weight: 700; }
+  h2 {
+    font-size: 10pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .4px; margin: 5px 0 2px; padding-bottom: 1px;
+    border-bottom: 1px solid #000;
+  }
+  .row { display: flex; justify-content: space-between; align-items: baseline; }
+  .row .title { font-weight: 700; }
+  .row .date { font-weight: 700; white-space: nowrap; padding-left: 12px; }
+  .sub { font-style: italic; margin: 0 0 1px; }
+  ul { margin: 1px 0 3px; padding-left: 16px; }
+  li { margin: 0 0 1px; }
+  .skills p { margin: 0 0 1px; }
+  .skills b { font-weight: 700; }
+  .tight li { margin: 0 0 1px; }
+  .block { margin-bottom: 3px; }
+</style>
+</head>
+<body>
+
+  <div class="name">G. Jake Gunnell</div>
+  <div class="contact">gunnjakeim@gmail.com | linkedin.com/in/gary-jake-gunnell | jakegunnell.com</div>
+
+  <p class="summary"><b>Full-stack software engineer</b> experienced building production applications using Python, FastAPI, React, PostgreSQL, and AWS with focus on backend APIs, data pipelines, and scalable cloud systems.</p>
+
+  <h2>Education</h2>
+  <div class="row">
+    <span class="title">Integrated BS / Master of Information Systems Management (MISM)</span>
+    <span class="date">Apr 2029</span>
+  </div>
+  <div class="sub">Software &amp; Systems Development Emphasis, STEM-Certified Technical Program</div>
+  <div class="sub">Brigham Young University - Marriott School of Business, Provo, UT</div>
+  <ul>
+    <li>GPA: 3.70</li>
+    <li>Relevant Coursework: Database Systems, Enterprise Application Development, Business Programming, Systems Design, Data Communications, IS Security &amp; Controls, Machine Learning</li>
+  </ul>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <p><b>AI-Assisted Development:</b> Claude Code (terminal AI agent), MCP servers, agent workflows, and local LLMs (Ollama); Claude and ChatGPT for rapid prototyping, debugging, backend development, and workflow automation</p>
+    <p><b>Programming Languages:</b> Python, JavaScript, SQL, Java, HTML, CSS, C#, React</p>
+    <p><b>Frameworks &amp; Libraries:</b> FastAPI, Node.js, Express, React, Flask, Next.js</p>
+    <p><b>Backend &amp; APIs:</b> RESTful APIs, API Design, Authentication, Authorization, Data Pipelines</p>
+    <p><b>Databases:</b> PostgreSQL, SQLite, Database Design, Query Optimization</p>
+    <p><b>Cloud &amp; DevOps:</b> AWS (EC2, RDS, S3), Docker, Nginx, Linux, GitHub Actions, CI/CD, Supabase, Vercel, Azure</p>
+    <p><b>Data &amp; Analytics:</b> Polars, Plotly, Machine Learning, Data Pipelines, Tableau, Power BI</p>
+    <p><b>Certifications:</b> Professional Scrum Master I (PSM I), Scrum.org — 2026</p>
+  </div>
+
+  <h2>Project Experience</h2>
+  <ul class="tight">
+    <li><b>BEACON Nonprofit Intelligence Platform (INTEX) | 2026:</b> Built a full-stack, multi-role web platform using React, C#, PostgreSQL, and Supabase with role-based authentication, dashboards, and data-driven impact and donor analytics</li>
+    <li><b>Crypto Trading Bot | 2025:</b> Built an automated Python trading bot for Binance.us using SMA-crossover and RSI strategies with regime-aware switching and layered risk controls (ATR-based stop-loss/take-profit, crash detection); ran live and logged real trades, with a local Flask dashboard</li>
+    <li><b>Stock Trading Bots | 2026:</b> Built two rule-based stock bots on the Alpaca API (paper trading) — a Flask momentum/trend trader and a FastAPI scanner that ranks 300+ symbols on technical indicators and uses a local LLM (Ollama) to explain trades</li>
+    <li><b>Huus Cleaning Platform | 2025:</b> Built a full-stack web application using Node.js, Express, PostgreSQL, and Tailwind; implemented backend routing and admin workflow</li>
+    <li><b>Ella Rises Nonprofit Platform (INTEX) | 2025:</b> Built a full-stack, multi-role web platform using Node.js, Express, PostgreSQL, AWS, and Nginx with role-based authentication, dashboards, and event registration</li>
+    <li><b>EY Technology Risk Case Competition | 2025:</b> Analyzed system logs, penetration test results, and network diagrams to recommend technology risk mitigations</li>
+  </ul>
+
+  <h2>Experience</h2>
+
+  <div class="block">
+    <div class="row"><span class="title">Full Stack Developer</span><span class="date">Jun 2026 – Present</span></div>
+    <div class="sub">BYU Finance Program, Provo, UT</div>
+    <ul>
+      <li>Designed and built an internal alumni-management platform (CRM) with a Next.js/TypeScript frontend, a Python/FastAPI backend, and a Supabase-hosted PostgreSQL database, deployed on Vercel</li>
+      <li>Designed a ~25-table PostgreSQL schema (Alembic migrations) and an async SQLAlchemy API for alumni records, events, follow-up tasks, and an immutable audit log</li>
+      <li>Built data-ingestion and cleaning pipelines that normalize and validate alumni data—names, emails, phone numbers, BYU IDs, and controlled vocabularies—plus a CSV bulk-import flow with dry-run validation and duplicate detection</li>
+      <li>Implemented role-based access control (3 roles) and Supabase Auth with JWT verification and session management; ~220 passing tests with CI for linting, tests, and secret scanning</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <div class="row"><span class="title">Full-Stack Software Engineer</span><span class="date">Sep 2025 – Present</span></div>
+    <div class="sub">BYU Silver Fund – Student Investment Fund, Provo, UT</div>
+    <ul>
+      <li>Developed and maintain a production full-stack web platform using FastAPI, React, PostgreSQL, and Polars</li>
+      <li>Designed RESTful API endpoints enabling portfolio analytics, reporting, and financial data exports</li>
+      <li>Architected Python ETL pipelines using Polars to automate financial data processing and improve backend performance</li>
+      <li>Built and optimized React frontend components while resolving API integration and data consistency issues</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <div class="row"><span class="title">IT Service Desk Technician</span><span class="date">Aug 2025 – Nov 2025</span></div>
+    <div class="sub">BYU College of Life Sciences, Provo, UT</div>
+    <ul>
+      <li>Diagnosed and resolved hardware, software, and network issues across Windows, macOS, and Linux systems</li>
+      <li>Supported 200+ users through Halo CRM ticketing system while maintaining system uptime and reliability</li>
+      <li>Documented troubleshooting workflows and technical procedures to improve issue resolution consistency and training</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <div class="row"><span class="title">Volunteer Representative - Tagalog &amp; English Proficiency</span><span class="date">Jun 2022 – Jun 2024</span></div>
+    <div class="sub">The Church of Jesus Christ of Latter-day Saints, Philippines</div>
+    <ul>
+      <li>Led teams of up to 12 individuals in goal-setting and leadership; coordinated service projects in under-developed communities</li>
+    </ul>
+  </div>
+
+  <h2>Other Skills</h2>
+  <div class="skills">
+    <p>Eagle Scout, Boy Scouts of America (Aug 2019); Varsity, Club, and Travel Lacrosse teams; enjoy working out, watching college basketball, and researching stocks, crypto, and real estate</p>
+  </div>
+
+</body>
+</html>

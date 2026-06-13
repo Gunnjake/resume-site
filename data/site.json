@@ -10,8 +10,8 @@
   "linkedInLabel": "LinkedIn",
   "github": "https://github.com/Gunnjake",
   "githubLabel": "GitHub",
-  "featuredProjectIds": ["beacon-nonprofit-analytics", "trading-bot", "stock-trading-bot", "resume-website"],
-  "featuredExperienceIds": ["silver-fund"],
+  "featuredProjectIds": ["stock-trading-bot", "resume-website"],
+  "featuredExperienceIds": ["finance-alumni-database"],
   "pageSubtitles": {
     "experience": "Professional and technical experience in software engineering and information systems.",
     "projects": "A collection of systems, applications, and platforms I've built.",

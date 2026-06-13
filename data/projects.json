@@ -6,7 +6,7 @@
       "subtitle": "Data-driven nonprofit operations and donor analytics",
       "shortDescription": "Data-driven nonprofit operations and donor analytics platform focused on operational visibility, donor retention, and impact reporting.",
       "technologies": ["React", "C#", "ASP.NET", "Supabase", "PostgreSQL", "SQL", "AWS"],
-      "featured": true,
+      "featured": false,
       "year": "2026",
       "heroImage": "assets/img/projects/beacon/Homepage.png",
       "heroCaption": "Public-facing homepage introducing the BEACON nonprofit analytics platform.",
@@ -156,92 +156,113 @@
     {
       "slug": "trading-bot",
       "title": "Crypto Trading Bot",
-      "subtitle": "Multi-user fintech platform for automated crypto trading",
-      "shortDescription": "Full-stack cryptocurrency trading platform with separated backend execution logic, a React/Next.js dashboard, PostgreSQL persistence, encrypted API key storage, and modular exchange adapters built for scalability and multi-exchange expansion.",
-      "technologies": ["Python", "FastAPI", "Flask", "React", "Next.js", "PostgreSQL", "REST APIs"],
-      "featured": true,
-      "year": "2026",
-      "heroImage": "assets/img/projects/trading-bot/Dashboardv1.png",
-      "heroCaption": "Real-time trading dashboard for monitoring portfolio performance, positions, and strategy activity.",
+      "subtitle": "Automated cryptocurrency trading bot for Binance.us",
+      "shortDescription": "A Python trading bot that runs SMA-crossover and RSI strategies against Binance.us, with regime-aware strategy switching, layered risk controls, CSV-based trade tracking, and a local Flask dashboard. It has run live and logged real trades.",
+      "technologies": ["Python", "Binance.us API", "Flask", "pandas", "Chart.js", "Discord Webhooks"],
+      "featured": false,
+      "year": "2025",
       "sections": [
         {
           "title": "Overview",
           "paragraphs": [
-            "Designed and built a multi-user cryptocurrency trading platform that separates backend trading logic from the frontend dashboard. The system supports secure user onboarding, exchange connectivity, strategy execution, and operational monitoring through a modern fintech-style interface.",
-            "Architecture emphasizes modularity, security, and scalability—using PostgreSQL for persistent data, encrypted storage for user API credentials, and exchange-agnostic adapters so additional venues can be integrated without rewriting core trading workflows."
+            "Built an automated cryptocurrency trading bot that connects to Binance.us and trades a fixed set of USDT pairs (BTC, ETH, ADA, SOL, DOGE, SHIB) on a recurring loop. Each cycle it pulls recent candles, computes indicators, classifies the market regime, evaluates a buy/sell/hold signal, applies risk gates, and places limit orders when conditions allow.",
+            "The bot is a single-account system written in Python. It stores all state in CSV files rather than a database—reconstructing open positions from the trade log on each cycle—so it can be stopped and restarted safely. It has run live against a real Binance.us account and logged actual trades and daily portfolio snapshots."
           ]
         },
         {
           "title": "Key Features",
           "list": [
-            "Multi-user platform with isolated account data and encrypted exchange API key storage.",
-            "Backend trading engine separated from the React/Next.js dashboard for cleaner service boundaries.",
-            "Exchange-agnostic design with modular adapters for connecting to different crypto venues.",
-            "Real-time dashboard for portfolio visibility, trade activity, and strategy monitoring.",
-            "Risk controls including trade sizing, profit locking, crash detection, and adaptive strategy logic.",
-            "Admin dashboard structure for platform oversight, user management, and operational visibility.",
-            "Built for future multi-exchange support, security hardening, and production-scale expansion."
+            "SMA-crossover entry/exit signals confirmed by RSI, implemented as modular strategy classes.",
+            "Regime-aware behavior: a defensive strategy blocks new buys during detected crashes or high-volatility conditions.",
+            "Time-of-day strategy switching—an aggressive profile on 1-minute candles during set UTC hours, a moderate profile on 15-minute candles otherwise.",
+            "Layered risk controls: a minimum portfolio floor, market-crash detection, a BTC 'canary' check, and ATR-based stop-loss / take-profit levels.",
+            "CSV-based persistence for trade history and daily balance snapshots; positions are inferred from the log rather than held in memory.",
+            "Local Flask dashboard (vanilla HTML/CSS/JS with Chart.js) showing portfolio value, realized/unrealized P&L, win rate, per-asset balances, and an activity log.",
+            "Optional Discord webhook notifications for trade fills, risk blocks, daily summaries, and errors."
           ]
         },
         {
           "title": "My Contributions",
           "list": [
-            "Architected the full-stack platform split between backend trading services and frontend dashboard layers.",
-            "Implemented backend APIs and trading workflows using Python with Flask/FastAPI patterns.",
-            "Built dashboard interfaces in React/Next.js for real-time monitoring and user-facing controls.",
-            "Designed PostgreSQL schemas and data flows for users, strategies, trades, and platform state.",
-            "Developed exchange integration patterns with modular adapters to reduce vendor lock-in.",
-            "Implemented risk-management features including sizing rules, profit locking, and crash detection.",
-            "Established admin dashboard foundations for operational monitoring and platform governance."
+            "Designed the recurring trading loop and the separation between the API client, indicators, strategies, risk engine, and logging.",
+            "Implemented the Binance.us integration using python-binance (candles, balances, exchange rules, and limit orders).",
+            "Wrote the SMA/RSI strategy, the defensive strategy, and the regime-based strategy selector.",
+            "Built the risk engine: portfolio floor, crash detection, BTC canary, and ATR-derived stop-loss/take-profit.",
+            "Implemented CSV trade and balance logging plus the position-reconstruction logic that survives restarts.",
+            "Built the local Flask dashboard and the optional Discord notification layer.",
+            "Iteratively tuned strategy parameters—candle granularity, SMA lengths, and RSI thresholds—based on live behavior."
           ]
         },
         {
           "title": "Technologies Used",
-          "paragraphs": ["Python, Flask, FastAPI, React, Next.js, PostgreSQL, REST APIs, Exchange Integrations"]
+          "paragraphs": ["Python, python-binance (Binance.us API), Flask, pandas, Chart.js, Discord webhooks, CSV-based storage"]
+        },
+        {
+          "title": "Honest Scope",
+          "paragraphs": [
+            "This is a working single-user bot, not a multi-tenant platform. It trades one Binance.us account, stores data in CSV files (no database), and has no backtesting engine or multi-exchange support. The dashboard runs locally and API keys are read from a local .env file."
+          ]
         }
       ]
     },
     {
       "slug": "stock-trading-bot",
-      "title": "Stock Trading Bot",
-      "subtitle": "Rule-based stock automation and strategy testing platform",
-      "shortDescription": "Stock trading automation system for market data analysis, signal evaluation, and rule-based strategy execution—with risk controls, trade history tracking, and a dashboard foundation designed for future brokerage API integration.",
-      "technologies": ["Python", "FastAPI", "React", "PostgreSQL", "REST APIs", "Automation"],
+      "title": "Stock Trading Bots",
+      "subtitle": "Two rule-based stock trading bots built on the Alpaca API",
+      "shortDescription": "Two iterations of an automated stock trading bot built on Alpaca paper trading. The first is a Flask-based momentum/trend trader; the second is a FastAPI service that scans 300+ symbols with technical indicators and uses a local LLM to explain its trades. Both are rule-based and run in paper or simulated mode.",
+      "technologies": ["Python", "Alpaca API", "FastAPI", "Flask", "pandas", "Ollama (local LLM)", "Chart.js"],
       "featured": true,
       "year": "2026",
       "sections": [
         {
           "title": "Overview",
           "paragraphs": [
-            "Built a stock trading automation system focused on analyzing market data, evaluating trading signals, and supporting rule-based trade execution in a controlled development and testing environment. The platform emphasizes strategy validation, risk management, and portfolio visibility rather than overstating production live-trading readiness.",
-            "The architecture is designed as a foundation for future brokerage API integration, with clear separation between data ingestion, strategy logic, execution workflows, and performance reporting."
+            "Built two versions of an automated stock trading bot on top of the Alpaca brokerage API, both defaulting to paper trading. The goal was to analyze live market data, generate rule-based signals, and execute trades under explicit risk controls—logging everything for review. Neither version uses machine learning to make trading decisions; the strategies are deterministic, indicator-based rules.",
+            "The two versions share the same philosophy but differ in architecture: the first is a Flask-based momentum and trend trader; the second is a FastAPI service that scans a much larger universe, validates trades through a dedicated risk engine, and adds a local LLM that writes plain-language explanations of each trade."
           ]
         },
         {
-          "title": "Key Features",
+          "title": "Version 1 — Flask Momentum/Trend Bot",
           "list": [
-            "Market data ingestion pipelines for structured analysis and strategy inputs.",
-            "Trading signal generation and rule-based strategy evaluation workflows.",
-            "Risk management controls to constrain position sizing and trade behavior.",
-            "Trade history tracking for auditability and post-trade analysis.",
-            "Portfolio and performance dashboard structure for monitoring strategy outcomes.",
-            "Extensible design prepared for future brokerage API integration and live execution phases."
+            "Long-only strategy: enters when price is above its 20-day moving average with positive short-term momentum, above-average volume, and a bullish SPY market filter.",
+            "Exits on a stop loss, take profit, loss of trend, or fading momentum.",
+            "Risk controls: a maximum number of concurrent positions, a per-position size cap, dynamic position sizing, and a daily loss limit.",
+            "CSV logging of trades, signals, equity, positions, errors, and daily summaries, with retention-based cleanup and gzip backups.",
+            "A watchdog thread auto-restarts the bot if the main loop stalls, alongside a Flask dashboard (later deactivated in favor of Alpaca's own) and optional Discord notifications."
+          ]
+        },
+        {
+          "title": "Version 2 — FastAPI Scanner Bot with Local LLM",
+          "list": [
+            "FastAPI + APScheduler service that scans 300+ S&P 500 / NASDAQ-100 symbols on a recurring cycle during market hours.",
+            "Computes ~13 technical indicators (SMA, EMA, RSI, MACD, ATR, VWAP, momentum, relative volume) and ranks opportunities before generating signals via a multi-factor voting system.",
+            "A risk engine validates each candidate trade on spread, liquidity, and a risk-reward ratio that adapts to volatility, then places bracket (OCO) orders with attached stop-loss and take-profit.",
+            "Runs in LEARNING (simulated), PAPER (real Alpaca paper orders), or LIVE mode—LIVE is intentionally gated off in code behind hard safety checks.",
+            "A local Ollama model (qwen2.5-coder:7b) generates concise, human-readable explanations of placed trades for the logs and dashboard—explanation only, never used to decide trades.",
+            "CSV logging of trades, signals, rankings, AI explanations, and daily summaries, with Discord weekly summaries and error alerts."
           ]
         },
         {
           "title": "My Contributions",
           "list": [
-            "Designed backend services in Python/FastAPI for market data processing and strategy execution logic.",
-            "Implemented rule-based trading workflows with configurable strategy and risk parameters.",
-            "Built PostgreSQL-backed models for trades, positions, and performance history.",
-            "Developed React dashboard components for portfolio tracking and strategy visibility.",
-            "Integrated market data API workflows to support analysis and signal generation.",
-            "Structured the system for phased rollout from testing and simulation toward live brokerage connectivity."
+            "Designed both bots' architectures—separating market-data access, strategy logic, risk validation, order execution, and logging.",
+            "Implemented the Alpaca integrations (account, bars, positions, market and bracket orders) for paper trading.",
+            "Wrote the rule-based strategies: the momentum/trend logic in v1 and the indicator-voting signal generation in v2.",
+            "Built the risk controls in both versions, including v2's adaptive risk-reward engine and bracket-order stops/targets.",
+            "Integrated a local Ollama LLM in v2 to produce plain-language trade explanations without affecting trading decisions.",
+            "Implemented CSV-based logging, retention/cleanup, watchdog auto-restart, and Discord notifications.",
+            "Built Flask and FastAPI dashboards for monitoring (both later deprioritized in favor of Alpaca's native dashboard)."
           ]
         },
         {
           "title": "Technologies Used",
-          "paragraphs": ["Python, FastAPI, React, PostgreSQL, Market Data APIs, Automation, Trading Strategy Logic"]
+          "paragraphs": ["Python, Alpaca API (alpaca-py), FastAPI, Flask, APScheduler, pandas, numpy, the 'ta' indicator library, Ollama (local qwen2.5-coder LLM), Chart.js, CSV-based storage, Discord webhooks"]
+        },
+        {
+          "title": "Honest Scope",
+          "paragraphs": [
+            "Both bots run in paper or simulated mode; live trading is either untested or deliberately disabled in code. Neither includes a backtesting engine, and data is stored in CSV files rather than a database. The signals are rule-based—the LLM only narrates trades, it does not make them."
+          ]
         }
       ]
     },

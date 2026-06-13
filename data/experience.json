@@ -1,6 +1,42 @@
 {
   "experiences": [
     {
+      "slug": "finance-alumni-database",
+      "role": "Full Stack Developer",
+      "organization": "BYU Finance Program",
+      "dateRange": "Jun 2026 – Present",
+      "location": "Provo, UT",
+      "summary": "Designed and built an internal alumni-management platform (CRM) for the BYU finance program—centralizing alumni records, tracking engagement, and supporting outreach—built with Next.js, FastAPI, and a Supabase-hosted PostgreSQL database and deployed on Vercel.",
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "PostgreSQL", "Supabase", "SQLAlchemy", "Vercel", "GitHub Actions"],
+      "featured": true,
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Designed and built an internal alumni-management platform (a custom CRM) for the BYU finance program to centralize alumni records, track engagement, and support outreach. The application is deployed on Vercel across separate development and production environments and is used by program staff to manage the alumni database.",
+            "I own the full stack: a TypeScript/Next.js frontend, a Python/FastAPI backend, and a Supabase-hosted PostgreSQL database with Supabase Auth for login and role-based access control."
+          ]
+        },
+        {
+          "title": "What I Built",
+          "list": [
+            "Designed a PostgreSQL schema of ~25 tables (managed with Alembic migrations) covering alumni records, contact info, employment and education history, events and attendance, interactions, follow-up tasks, and an immutable audit log.",
+            "Built a FastAPI backend (async SQLAlchemy + asyncpg) exposing CRUD, multi-dimension search and filtering, dashboard aggregations, event management, audit search, and admin endpoints—covered by ~220 passing pytest tests with CI for linting, tests, and secret scanning.",
+            "Built the Next.js (App Router) + TypeScript + Tailwind frontend, including an alumni list with search and 10+ filters, profile pages, dashboards with KPIs and charts, and an interactive US map showing alumni distribution down to the county level.",
+            "Implemented role-based access control with three roles (super admin, full access, view-only), enforced server-side in the API and reflected in the UI.",
+            "Built data-ingestion and cleaning pipelines that normalize and validate incoming alumni data before it is written—standardizing names, parsing and validating emails, phone numbers, and LinkedIn URLs, enforcing the BYU ID format, and checking values against controlled industry, tag, and status vocabularies.",
+            "Built a CSV bulk-import pipeline (parse → dry-run validation → commit) that reuses the same cleaning layer, with per-row error reporting and automatic duplicate detection both within an upload and against existing records.",
+            "Implemented Supabase Auth login with JWT verification and session management, including idle-timeout handling and cross-tab session awareness.",
+            "Set up deployment and CI/CD on Vercel with separate dev and production environments and GitHub Actions checks on pull requests."
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": ["Next.js, React, TypeScript, Tailwind CSS, FastAPI, Python, SQLAlchemy, PostgreSQL, Supabase (Auth, Postgres, Storage), Alembic, Vercel, GitHub Actions"]
+        }
+      ]
+    },
+    {
       "slug": "summit-stack-co",
       "role": "Founder & Full Stack Developer",
       "organization": "Summit Stack Co.",
