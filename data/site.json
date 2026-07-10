@@ -1,7 +1,7 @@
 {
   "name": "G. Jake Gunnell",
-  "title": "Full-Stack Developer & Information Systems Student",
-  "intro": "Full-stack developer with hands-on experience building scalable production systems using Python, JavaScript, SQL, React, FastAPI, and cloud-based infrastructure. Interested in high-performance backend design, financial data pipelines, and dependable software that solves real problems.",
+  "title": "Systems Developer & Information Systems Student",
+  "intro": "Systems developer with hands-on experience building scalable production systems using Python, FastAPI, React, PostgreSQL, SQL, and cloud-based infrastructure. Interested in high-performance backend design, financial data pipelines, and dependable software that solves real problems.",
   "badge": "Scrum Certified",
   "profileImage": "assets/img/Headshot.jpg",
   "resumePath": "assets/docs/Gunnell, Jake.pdf",

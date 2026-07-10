@@ -26,8 +26,9 @@
       "meta": "Backend, frontend, and full-stack development",
       "description": "Strong experience building full-stack applications, APIs, and data-driven systems using modern frameworks and clean architectural patterns.",
       "items": [
-        "**Languages:** Python, JavaScript (Node.js), SQL, HTML/CSS, Java",
+        "**Languages:** Python, JavaScript (Node.js), SQL, C#, HTML/CSS",
         "**Frameworks:** FastAPI, Express, Flask, React, Next.js, EJS",
+        "**Databases:** PostgreSQL, SQLite, Supabase",
         "**Styling:** Tailwind CSS, Bootstrap"
       ]
     },
@@ -68,7 +69,7 @@
       "description": "Experience working in collaborative development environments with version control, cloud infrastructure, and production deployment workflows.",
       "items": [
         "**Version Control:** Git, GitHub",
-        "**Cloud:** AWS (EC2, RDS, S3)",
+        "**Cloud:** AWS (EC2, RDS, S3), Vercel",
         "**Infrastructure:** Docker, Nginx",
         "**Development Tools:** VS Code, Microsoft 365, Google Workspace"
       ]
@@ -84,9 +85,9 @@
   ],
   "certifications": [
     {
-      "name": "Scrum Certification",
-      "meta": "Standalone credential",
-      "description": "Certified in Scrum methodology.",
+      "name": "Professional Scrum Master I (PSM I)",
+      "meta": "Scrum.org · 2026",
+      "description": "Professional Scrum Master I (PSM I) certification from Scrum.org.",
       "link": {
         "href": "assets/certs/scrum.pdf.pdf",
         "text": "View Certificate (PDF)"
