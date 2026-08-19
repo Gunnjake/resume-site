@@ -1828,6 +1828,11 @@ a.inline-link:hover { text-decoration: underline; }
     padding-top: var(--space-6);
     padding-bottom: var(--space-6);
   }
+  /* 20 tiles in a 5x4 grid ran ~395px tall on a phone — most of a screen on
+     the way down. Show two rows; main.js keeps the spotlight on visible
+     tiles only. The item list is shuffled per load, so which ten appear
+     still varies. */
+  .tech-stack-matrix .tech-stack-tile:nth-child(n+11) { display: none; }
 
   /* --- Cards: trim inner padding so text gets the width back --- */
   .card { padding: var(--space-4); }

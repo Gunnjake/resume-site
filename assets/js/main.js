@@ -90,11 +90,22 @@
       }
     }
 
+    /* Narrow viewports hide the later tiles, so only spotlight what is on
+       screen — otherwise the readout names a tool nobody can see. */
+    function visibleIndexes() {
+      var out = [];
+      for (var i = 0; i < tiles.length; i++) {
+        if (tiles[i].offsetParent !== null) out.push(i);
+      }
+      return out.length ? out : tiles.map(function (_, i) { return i; });
+    }
+
     function setActiveRandom() {
       if (!tiles.length) return;
-      var nextIndex = Math.floor(Math.random() * tiles.length);
-      if (tiles.length > 1 && nextIndex === activeIndex) {
-        nextIndex = (nextIndex + 1) % tiles.length;
+      var pool = visibleIndexes();
+      var nextIndex = pool[Math.floor(Math.random() * pool.length)];
+      if (pool.length > 1 && nextIndex === activeIndex) {
+        nextIndex = pool[(pool.indexOf(nextIndex) + 1) % pool.length];
       }
       if (activeIndex >= 0 && tiles[activeIndex]) {
         tiles[activeIndex].classList.remove('is-spotlight');
