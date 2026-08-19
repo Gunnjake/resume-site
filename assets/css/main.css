@@ -700,12 +700,13 @@ a.inline-link:hover { text-decoration: underline; }
   height: 38px;
 }
 .landing-section .tech-stack-panel .tech-stack-icon img {
-  filter: brightness(1.25) contrast(1.12);
-  transition: filter var(--duration-fast);
+  filter: brightness(0) invert(1);
+  opacity: 0.72;
+  transition: opacity var(--duration-fast);
 }
 .landing-section .tech-stack-panel .tech-stack-tile:hover .tech-stack-icon img,
 .landing-section .tech-stack-panel .tech-stack-tile.is-spotlight .tech-stack-icon img {
-  filter: brightness(1.4) contrast(1.15);
+  opacity: 1;
 }
 .landing-section .tech-stack-active-name {
   font-size: 0.8125rem;
@@ -1008,13 +1009,17 @@ a.inline-link:hover { text-decoration: underline; }
   height: 100%;
   object-fit: contain;
   display: block;
-  filter: grayscale(0.08);
-  transition: transform var(--duration-normal) var(--ease-out), filter var(--duration-normal);
+  /* Icons are single-path Simple Icons with no fill, so they render black on
+     the dark surface. brightness(0) flattens any source color, invert(1)
+     lifts it to white; opacity carries the resting/active distinction. */
+  filter: brightness(0) invert(1);
+  opacity: 0.75;
+  transition: transform var(--duration-normal) var(--ease-out), opacity var(--duration-normal);
 }
 .tech-stack-tile:hover .tech-stack-icon img,
 .tech-stack-tile.is-spotlight .tech-stack-icon img {
   transform: scale(1.06);
-  filter: none;
+  opacity: 1;
 }
 .tech-stack-hover-label {
   position: absolute;
