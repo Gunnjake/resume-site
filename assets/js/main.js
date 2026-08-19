@@ -178,34 +178,57 @@
   }
 
   /**
-   * On phones the nav is a horizontal scroll strip. Bring the active link into
-   * view so the current page is visible without the user scrolling the strip.
+   * Below 900px the nav collapses to a hamburger dropdown. Closes on link
+   * activation, Escape, an outside tap, or once the viewport is wide enough
+   * for the full row again.
    */
-  function initNavScroll() {
+  function initNavMenu() {
     var nav = document.querySelector('.nav');
     if (!nav) return;
-    var active = nav.querySelector('a.active');
-    if (active && nav.scrollWidth > nav.clientWidth) {
-      var offset = active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
-      nav.scrollLeft = Math.max(0, offset);
+    var toggle = nav.querySelector('.nav-toggle');
+    var menu = nav.querySelector('.nav-menu');
+    if (!toggle || !menu) return;
+
+    function setOpen(open) {
+      nav.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     }
-    function updateFade() {
-      var more = nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 1;
-      nav.classList.toggle('has-overflow', more);
-    }
-    updateFade();
-    nav.addEventListener('scroll', updateFade, { passive: true });
-    window.addEventListener('resize', updateFade);
+
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setOpen(!nav.classList.contains('is-open'));
+    });
+
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setOpen(false);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('is-open') && !nav.contains(e.target)) setOpen(false);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    var wide = window.matchMedia('(min-width: 900px)');
+    var onChange = function (e) { if (e.matches) setOpen(false); };
+    if (wide.addEventListener) wide.addEventListener('change', onChange);
+    else if (wide.addListener) wide.addListener(onChange);
   }
 
   function init() {
-    initNavScroll();
+    initNavMenu();
     initReveal();
     initSkillTiles();
     initTechStackHighlight();
   }
 
-  window.initNavScroll = initNavScroll;
+  window.initNavMenu = initNavMenu;
   window.initReveal = initReveal;
   window.initSkillTiles = initSkillTiles;
   window.initTechStackHighlight = initTechStackHighlight;
