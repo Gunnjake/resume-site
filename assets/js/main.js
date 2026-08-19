@@ -166,12 +166,35 @@
     });
   }
 
+  /**
+   * On phones the nav is a horizontal scroll strip. Bring the active link into
+   * view so the current page is visible without the user scrolling the strip.
+   */
+  function initNavScroll() {
+    var nav = document.querySelector('.nav');
+    if (!nav) return;
+    var active = nav.querySelector('a.active');
+    if (active && nav.scrollWidth > nav.clientWidth) {
+      var offset = active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
+      nav.scrollLeft = Math.max(0, offset);
+    }
+    function updateFade() {
+      var more = nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 1;
+      nav.classList.toggle('has-overflow', more);
+    }
+    updateFade();
+    nav.addEventListener('scroll', updateFade, { passive: true });
+    window.addEventListener('resize', updateFade);
+  }
+
   function init() {
+    initNavScroll();
     initReveal();
     initSkillTiles();
     initTechStackHighlight();
   }
 
+  window.initNavScroll = initNavScroll;
   window.initReveal = initReveal;
   window.initSkillTiles = initSkillTiles;
   window.initTechStackHighlight = initTechStackHighlight;
