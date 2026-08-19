@@ -1081,10 +1081,16 @@ a.inline-link:hover { text-decoration: underline; }
 /* --- Highlights grid --- */
 .highlights-grid {
   grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
+  /* Rows size to content while stacked. Equal-height rows only earn their
+     keep once cards sit side by side; in one column 1fr stretched every
+     card to the tallest one and left ~150px of dead space in the rest. */
+  grid-auto-rows: auto;
 }
 @media (min-width: 640px) {
-  .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+  }
 }
 @media (min-width: 900px) {
   .highlights-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1174,9 +1180,14 @@ a.inline-link:hover { text-decoration: underline; }
 .highlights-grid .card,
 .contact-grid .card,
 .skills-grid .card {
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 640px) {
+  .highlights-grid .card,
+  .contact-grid .card,
+  .skills-grid .card { height: 100%; }
 }
 
 /* --- Timeline / Experience cards --- */
@@ -1677,9 +1688,11 @@ a.inline-link:hover { text-decoration: underline; }
   .nav-resume-btn:hover, .primary-btn:hover, .details-btn:hover { transform: none; }
 }
 
-/* Nav becomes a single scrollable row on phones — portrait and landscape.
-   Wrapped, it stacked to 113-160px of sticky header. */
-@media (max-width: 767px) {
+/* Nav becomes a single scrollable row on phones and tablets — portrait and
+   landscape. The links need 836px to sit on one row, so anything narrower
+   wrapped into a 113-160px sticky header. Below ~836px this scrolls; between
+   836px and 899px it simply renders as a compact single row. */
+@media (max-width: 899px) {
   /* --- Nav: single scrollable row instead of a 160px-tall stack --- */
   .nav {
     flex-wrap: nowrap;
