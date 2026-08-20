@@ -84,6 +84,16 @@ html { scroll-behavior: smooth; height: 100%; overflow-x: hidden; }
 @supports (overflow-x: clip) {
   html { overflow-x: clip; }
 }
+/* Nothing may exceed the screen, on any engine. */
+html, body { width: 100%; max-width: 100%; }
+/* Safety net for replaced/embedded content and long unbroken strings, which
+   are the usual way a page ends up wider than the viewport. */
+img, svg, video, canvas, iframe, table, pre { max-width: 100%; }
+body { overflow-wrap: break-word; }
+body { overflow-x: hidden; }
+@supports (overflow-x: clip) {
+  body { overflow-x: clip; }
+}
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -172,8 +182,10 @@ a.inline-link:hover { text-decoration: underline; }
 .section:last-child { margin-bottom: 0; }
 .section-alt {
   background: var(--bg-alt);
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  /* Bleeds to the container's padding edge instead of the viewport, so it
+     can never be wider than its parent. */
+  margin-left: calc(-1 * var(--space-4));
+  margin-right: calc(-1 * var(--space-4));
   padding: var(--space-12) var(--space-4);
 }
 .section-alt .section-inner {
@@ -1540,36 +1552,37 @@ a.inline-link:hover { text-decoration: underline; }
   font-size: var(--text-sm);
   color: rgba(148, 163, 184, 0.9);
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.97) 0%, #020617 100%);
-  width: 100dvw;
-  margin-left: calc(50% - 50dvw);
-  margin-right: calc(50% - 50dvw);
+  /* Direct child of <body>, so it spans the width with no viewport-unit
+     breakout. The old 100dvw + calc(50% - 50dvw) was the only construct on
+     the site that deliberately exceeded its parent. */
+  width: 100%;
 }
-.container.home .footer {
+.footer-home {
   padding: var(--space-4) var(--space-4) var(--space-3);
   border-top-color: rgba(148, 163, 184, 0.12);
   font-size: 0.75rem;
   color: rgba(148, 163, 184, 0.65);
 }
-.container.home .footer .footer-name,
-.container.home .footer .footer-role {
+.footer-home .footer-name,
+.footer-home .footer-role {
   color: rgba(226, 232, 240, 0.75);
 }
-.container.home .footer .footer-role {
+.footer-home .footer-role {
   color: rgba(148, 163, 184, 0.6);
 }
-.container.home .footer .footer-nav a,
-.container.home .footer .footer-right a {
+.footer-home .footer-nav a,
+.footer-home .footer-right a {
   color: rgba(148, 163, 184, 0.7);
   font-size: 0.7rem;
 }
-.container.home .footer .footer-nav a:hover,
-.container.home .footer .footer-right a:hover {
+.footer-home .footer-nav a:hover,
+.footer-home .footer-right a:hover {
   color: var(--text);
 }
-.container.home .footer .footer-main {
+.footer-home .footer-main {
   gap: var(--space-4);
 }
-.container.home .footer .footer-bottom {
+.footer-home .footer-bottom {
   padding-top: var(--space-2);
   font-size: 0.625rem;
   color: rgba(148, 163, 184, 0.5);
@@ -1832,7 +1845,7 @@ a.inline-link:hover { text-decoration: underline; }
   /* --- Footer --- */
   .footer { padding: var(--space-5) var(--space-4) var(--space-5); }
   .footer,
-  .container.home .footer {
+  .footer-home {
     padding-bottom: max(var(--space-5), env(safe-area-inset-bottom));
   }
   .footer-inner { gap: var(--space-4); }
