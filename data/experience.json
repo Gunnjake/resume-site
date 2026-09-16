@@ -14,7 +14,7 @@
           "title": "Overview",
           "paragraphs": [
             "Designed and built an internal alumni-management platform (a custom CRM) for the BYU finance program to centralize alumni records, track engagement, and support outreach. The application is deployed on Vercel across separate development and production environments and is used by program staff to manage the alumni database.",
-            "I own the full stack: a TypeScript/Next.js frontend, a Python/FastAPI backend, and a Supabase-hosted PostgreSQL database with Supabase Auth for login and role-based access control."
+            "As the sole developer, I own the full stack: a TypeScript/Next.js frontend, a Python/FastAPI backend, and a Supabase-hosted PostgreSQL database with Supabase Auth for login and role-based access control."
           ]
         },
         {
@@ -27,6 +27,7 @@
             "Built data-ingestion and cleaning pipelines that normalize and validate incoming alumni data before it is written—standardizing names, parsing and validating emails, phone numbers, and LinkedIn URLs, enforcing the BYU ID format, and checking values against controlled industry, tag, and status vocabularies.",
             "Built a CSV bulk-import pipeline (parse → dry-run validation → commit) that reuses the same cleaning layer, with per-row error reporting and automatic duplicate detection both within an upload and against existing records.",
             "Implemented Supabase Auth login with JWT verification and session management, including idle-timeout handling and cross-tab session awareness.",
+            "Wrote reporting, search, and validation queries used by program staff for operational decision-making and ongoing data maintenance.",
             "Set up deployment and CI/CD on Vercel with separate dev and production environments and GitHub Actions checks on pull requests."
           ]
         },
@@ -88,12 +89,12 @@
     },
     {
       "slug": "silver-fund",
-      "role": "Full-Stack Software Engineer",
+      "role": "Full-Stack Software Engineer | Quant Team Developer",
       "organization": "BYU Silver Fund",
       "dateRange": "Nov 2025 – Present",
       "location": "Provo, UT",
       "summary": "Maintain and extend a production-grade investment analytics platform used by student portfolio managers to evaluate performance, analyze time-series data, and support live investment decisions.",
-      "technologies": ["FastAPI", "React", "TypeScript", "PostgreSQL", "Polars", "AWS", "AWS Amplify", "Figma"],
+      "technologies": ["Python", "FastAPI", "React", "TypeScript", "PostgreSQL", "Polars", "AWS", "AWS Amplify", "Figma"],
       "featured": true,
       "logoPath": "assets/img/logos/silverfund.png",
       "logoAlt": "Silver Fund Logo",
@@ -102,7 +103,8 @@
           "title": "Overview",
           "paragraphs": [
             "BYU Silver Fund is one of the oldest and largest student-run investment funds in the United States, managed entirely by students across finance, accounting, economics, mathematics, and computer science under faculty supervision in the Marriott School of Business. Students conduct original research, make live investment decisions, and are directly accountable for fund performance. Alumni of the program have gone on to leadership roles across top firms in the finance industry.",
-            "As a Full Stack Engineer, I maintain and extend a production-grade investment analytics platform that supports multiple student-managed funds, including an undergraduate fundamental fund, a graduate fundamental fund, and a quantitative fund. The platform is used weekly by portfolio managers and analysts to evaluate performance, analyze time-series data, and support investment decisions."
+            "As a Full Stack Engineer, I maintain and extend a production-grade investment analytics platform that supports multiple student-managed funds, including an undergraduate fundamental fund, a graduate fundamental fund, and a quantitative fund. The platform is used weekly by portfolio managers and analysts to evaluate performance, analyze time-series data, and support investment decisions.",
+            "I also serve as a developer on the Silver Fund Quant Team, supporting the quantitative systems, supercomputing workflows, cloud infrastructure, financial data pipelines, and portfolio analytics used in fund research and investment decision-making."
           ],
           "overviewLink": { "url": "https://silverfund.byu.edu", "text": "BYU Silver Fund" }
         },
@@ -112,6 +114,8 @@
             "Maintain and manage four core repositories that collectively power the Silver Fund analytics platform, ensuring reliability, consistency, and clean integration across backend services, data pipelines, and frontend dashboards.",
             "Design and implement backend features using FastAPI and PostgreSQL, including a data download project that enables users to export time-series performance data as CSV files for external analysis and reporting.",
             "Work directly with the production database, writing and optimizing queries and supporting data processing pipelines using Polars to handle portfolio returns, benchmarks, and historical performance data.",
+            "Architected Python ETL pipelines using Polars to automate financial data processing and improve backend performance.",
+            "Designed RESTful API endpoints enabling portfolio analytics, reporting, and financial data exports.",
             "Contribute to frontend development by improving UI and UX across dashboards, including interactive charts, tables, filters, and CSV download functionality used by portfolio managers.",
             "Collaborate closely with a multidisciplinary engineering team through weekly team meetings, shared planning, and coordinated development cycles to deliver features aligned with fund needs.",
             "Participate in structured Git workflows by reviewing pull requests, providing technical feedback, and submitting PRs to maintain code quality and consistency across the codebase."
@@ -155,6 +159,7 @@
           "title": "Engineering Practices & Infrastructure",
           "list": [
             "Platform is hosted on AWS, with exposure to production cloud infrastructure and environment configuration.",
+            "Built pipeline monitoring and automated Slack failure alerts to improve visibility into data and deployment failures.",
             "Work with live databases and real investment data in a controlled production environment.",
             "Participate in regular code reviews, pull request discussions, and team design decisions.",
             "Engage in weekly team meetings to plan work, discuss issues, and align engineering priorities with fund needs."

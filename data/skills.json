@@ -28,7 +28,9 @@
       "items": [
         "**Languages:** Python, JavaScript (Node.js), SQL, C#, HTML/CSS",
         "**Frameworks:** FastAPI, Express, Flask, React, Next.js, EJS",
-        "**Databases:** PostgreSQL, SQLite, Supabase",
+        "**Databases:** PostgreSQL, SQLite, Supabase, database design, normalization",
+        "**SQL:** Complex joins, CTEs, window functions, aggregations, query optimization",
+        "**Backend & APIs:** RESTful APIs, API design, authentication, authorization, data pipelines",
         "**Styling:** Tailwind CSS, Bootstrap"
       ]
     },
@@ -37,7 +39,7 @@
       "meta": "Analytics pipelines, dashboards, and reporting",
       "description": "Experience working with structured financial and operational data, building analytics pipelines, and presenting insights through dashboards and exports.",
       "items": [
-        "**Data Processing:** Polars, SQL-based pipelines",
+        "**Data Processing:** Polars, Excel, SQL-based data pipelines",
         "**Visualization:** Plotly, Tableau, Power BI",
         "**Analytics:** Performance metrics, time-series analysis, basic machine learning"
       ]
@@ -50,6 +52,7 @@
         "**Agentic Coding:** Claude Code (terminal-based AI agent), Cursor",
         "**MCP:** Model Context Protocol servers for connecting tools and external integrations to AI agents",
         "**Agents & Local LLMs:** Custom agent workflows, Ollama for on-device inference (e.g., qwen2.5-coder)",
+        "**LLM Assistants:** Claude and ChatGPT for rapid prototyping, debugging, backend development, and workflow automation",
         "**Workflow Automation:** n8n"
       ]
     },
@@ -69,8 +72,9 @@
       "description": "Experience working in collaborative development environments with version control, cloud infrastructure, and production deployment workflows.",
       "items": [
         "**Version Control:** Git, GitHub",
-        "**Cloud:** AWS (EC2, RDS, S3), Vercel",
-        "**Infrastructure:** Docker, Nginx",
+        "**Cloud:** AWS (EC2, RDS, S3), Vercel, Azure",
+        "**Infrastructure:** Docker, Nginx, Linux",
+        "**CI/CD:** GitHub Actions, automated test and deployment pipelines",
         "**Development Tools:** VS Code, Microsoft 365, Google Workspace"
       ]
     },
@@ -80,6 +84,15 @@
       "items": [
         "Fluent in Tagalog",
         "Conversant in Bicolano"
+      ]
+    },
+    {
+      "name": "Interests & Activities",
+      "meta": "Outside of work",
+      "items": [
+        "Varsity, club, and travel lacrosse",
+        "Working out and watching college basketball",
+        "Researching stocks, crypto, and real estate"
       ]
     }
   ],
