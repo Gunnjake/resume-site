@@ -615,6 +615,101 @@ a.inline-link:hover { text-decoration: underline; }
   text-decoration: none;
 }
 
+/* --- Grouped tech stack (AI / Cloud / Programming) ---
+   Tiles are sized as a fraction of the row and wrap inside their group, so
+   nothing can grow wider than the panel. Desktop fits 6 per row; phones fit
+   8 so each group is a single row. */
+.tech-groups {
+  --tech-cols: 6;
+  --tech-gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 380px;
+}
+.tech-group-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-2);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.tech-group-title::before,
+.tech-group-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.35), transparent);
+}
+.tech-group-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--tech-gap);
+}
+.tech-stack-panel .tech-group .tech-stack-tile,
+.landing-section .tech-stack-panel .tech-group .tech-stack-tile {
+  flex: 0 0 calc((100% - (var(--tech-cols) - 1) * var(--tech-gap)) / var(--tech-cols));
+  width: auto;
+  height: auto;
+  aspect-ratio: 1;
+  container-type: inline-size;
+}
+.tech-stack-panel .tech-group .tech-stack-tile-surface,
+.landing-section .tech-stack-panel .tech-group .tech-stack-tile-surface {
+  padding: 18%;
+}
+.tech-stack-panel .tech-group .tech-stack-icon,
+.landing-section .tech-stack-panel .tech-group .tech-stack-icon {
+  width: 100%;
+  height: 100%;
+}
+.landing-section .tech-stack-panel .tech-group .tech-stack-icon img,
+.tech-stack-panel .tech-group .tech-stack-icon img {
+  filter: none;
+  opacity: 0.9;
+}
+.landing-section .tech-stack-panel .tech-group .tech-stack-tile--mono .tech-stack-icon img,
+.tech-stack-panel .tech-group .tech-stack-tile--mono .tech-stack-icon img {
+  filter: brightness(0) invert(1);
+}
+.landing-section .tech-stack-panel .tech-group .tech-stack-tile:hover .tech-stack-icon img,
+.landing-section .tech-stack-panel .tech-group .tech-stack-tile.is-spotlight .tech-stack-icon img {
+  opacity: 1;
+}
+.tech-stack-glyph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  font-size: 0.75rem;
+  font-size: 28cqi; /* scale with the tile so the letters never clip */
+  letter-spacing: 0.02em;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (max-width: 639px) {
+  .tech-groups {
+    --tech-cols: 8;
+    --tech-gap: 6px;
+    max-width: none;
+    gap: var(--space-3);
+  }
+  .tech-stack-panel .tech-group .tech-stack-tile-surface,
+  .landing-section .tech-stack-panel .tech-group .tech-stack-tile-surface {
+    padding: 16%;
+  }
+}
+
 /* --- Landing section (hero + Featured Experience = first screen) --- */
 .landing-section {
   min-height: 0;

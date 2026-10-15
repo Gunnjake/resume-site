@@ -59,7 +59,7 @@
   }
 
   function initTechStackHighlight() {
-    var grid = document.querySelector('.tech-stack-grid');
+    var grid = document.querySelector('.tech-groups') || document.querySelector('.tech-stack-grid');
     if (!grid) return;
 
     var panel = grid.closest('.tech-stack-panel');

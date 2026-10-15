@@ -25,6 +25,42 @@
     { "name": "Supabase", "file": "supabase.svg", "category": "Databases", "description": "Hosted PostgreSQL, auth, and storage." },
     { "name": "Next.js", "file": "nextjs.svg", "category": "Frameworks", "description": "React framework for full-stack web apps." },
     { "name": "Vercel", "file": "vercel.svg", "category": "Cloud", "description": "Deployment and hosting for web apps." }
+  ],
+  "groups": [
+    {
+      "title": "AI & Automation",
+      "items": [
+        { "name": "AWS Bedrock", "file": "bedrock-color.svg", "description": "Managed foundation models for RAG and AI systems." },
+        { "name": "Claude", "file": "claude-color.svg", "description": "Claude Code and Claude on AWS Bedrock." },
+        { "name": "Ollama", "file": "ollama.svg", "mono": true, "description": "Local LLM inference." },
+        { "name": "MCP", "displayName": "Model Context Protocol", "file": "mcp.svg", "mono": true, "description": "Connecting tools and integrations to AI agents." },
+        { "name": "RAG", "displayName": "Retrieval-Augmented Generation", "text": "RAG", "description": "Grounding LLM answers in your own documents." },
+        { "name": "Python", "file": "python-color.svg", "description": "Primary language for AI, data, and backend work." }
+      ]
+    },
+    {
+      "title": "Cloud & Infrastructure",
+      "items": [
+        { "name": "AWS", "file": "aws-color.svg", "description": "EC2, RDS, S3, and Bedrock." },
+        { "name": "Docker", "file": "docker-color.svg" },
+        { "name": "Linux", "file": "linux-color.svg" },
+        { "name": "Slurm", "file": "slurm-color.svg", "description": "HPC job scheduling for data pipelines." },
+        { "name": "GitHub Actions", "file": "githubactions-color.svg", "description": "CI/CD pipelines." },
+        { "name": "Vercel", "file": "vercel-color.svg", "mono": true, "description": "Deployment and hosting for web apps." }
+      ]
+    },
+    {
+      "title": "Programming & Backend",
+      "items": [
+        { "name": "Python", "file": "python-color.svg" },
+        { "name": "SQL", "text": "SQL", "description": "Joins, CTEs, window functions, and query optimization." },
+        { "name": "FastAPI", "file": "fastapi-color.svg" },
+        { "name": "PostgreSQL", "file": "postgresql-color.svg" },
+        { "name": "Supabase", "file": "supabase-color.svg" },
+        { "name": "Next.js", "file": "nextjs-color.svg" },
+        { "name": "React", "file": "react-color.svg" },
+        { "name": "Git", "file": "git-color.svg" }
+      ]
+    }
   ]
 }
-

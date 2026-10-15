@@ -171,6 +171,40 @@
     return html;
   }
 
+  /* Grouped tech stack: data/techstack.json "groups". Logos keep their brand
+     colors; "mono" items are black marks flipped to white, and "text" items
+     are concepts with no logo (RAG, SQL) rendered as a lettered tile. */
+  function renderTechStackGroups(stack) {
+    var html = '<div class="tech-groups reveal-stagger">';
+    stack.groups.forEach(function (group) {
+      html += '<div class="tech-group">' +
+        '<h3 class="tech-group-title">' + escapeHtml(group.title) + '</h3>' +
+        '<div class="tech-group-grid">';
+      (group.items || []).forEach(function (item) {
+        var name = String(item.name || '').trim();
+        if (!name || (!item.file && !item.text)) return;
+        var displayName = item.displayName ? String(item.displayName).trim() : name;
+        var ariaLabel = item.description ? (displayName + ' — ' + item.description) : displayName;
+        var inner;
+        if (item.file) {
+          var file = String(item.file).trim();
+          var iconPath = file.indexOf('/') === -1 ? ('assets/img/techstack/' + file) : file;
+          inner = '<img src="' + basePath + iconPath + '" alt="" role="presentation" loading="lazy">';
+        } else {
+          inner = '<span class="tech-stack-glyph">' + escapeHtml(item.text) + '</span>';
+        }
+        html += '<div class="tech-stack-tile' + (item.mono ? ' tech-stack-tile--mono' : '') + '" role="img" aria-label="' + escapeHtml(ariaLabel) + '" tabindex="0" data-name="' + escapeHtml(displayName) + '">' +
+          '<div class="tech-stack-tile-surface"><div class="tech-stack-icon">' + inner + '</div></div></div>';
+      });
+      html += '</div></div>';
+    });
+    html += '</div>' +
+      '<div class="tech-stack-side">' +
+      '<p class="tech-stack-active-name" data-default="Hover a tool icon" aria-live="polite">Hover a tool icon</p>' +
+      '</div>';
+    return html;
+  }
+
   function renderHeroWithTechStack(site, stack) {
     var heading = (site && site.techStackHeading) ? site.techStackHeading : 'Tech Stack';
     return '<section class="hero-and-tech reveal">' +
@@ -179,7 +213,7 @@
       '</div>' +
       '<div class="tech-stack-panel">' +
       '<h2 class="section-title tech-stack-title">' + escapeHtml(heading) + '</h2>' +
-      renderTechStackMatrix(stack) +
+      (stack && stack.groups && stack.groups.length ? renderTechStackGroups(stack) : renderTechStackMatrix(stack)) +
       '</div>' +
       '</section>';
   }
