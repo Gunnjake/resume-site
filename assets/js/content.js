@@ -186,15 +186,21 @@
         var displayName = item.displayName ? String(item.displayName).trim() : name;
         var ariaLabel = item.description ? (displayName + ' — ' + item.description) : displayName;
         var inner;
+        var isText = !item.file;
         if (item.file) {
           var file = String(item.file).trim();
           var iconPath = file.indexOf('/') === -1 ? ('assets/img/techstack/' + file) : file;
           inner = '<img src="' + basePath + iconPath + '" alt="" role="presentation" loading="lazy">';
         } else {
           var glyph = String(item.text);
-          inner = '<span class="tech-stack-glyph' + (glyph.length > 3 ? ' tech-stack-glyph--long' : '') + '">' + escapeHtml(glyph) + '</span>';
+          var sizeClass = glyph.length > 5 ? ' tech-stack-glyph--xlong' : (glyph.length > 3 ? ' tech-stack-glyph--long' : '');
+          var hex = /^#[0-9a-fA-F]{3,8}$/;
+          var colors = item.colors || [];
+          var colorStyle = (colors.length === 2 && hex.test(colors[0]) && hex.test(colors[1]))
+            ? ' style="background-image: linear-gradient(135deg, ' + colors[0] + ', ' + colors[1] + ')"' : '';
+          inner = '<span class="tech-stack-glyph' + sizeClass + '"' + colorStyle + '>' + escapeHtml(glyph) + '</span>';
         }
-        html += '<div class="tech-stack-tile' + (item.mono ? ' tech-stack-tile--mono' : '') + '" role="img" aria-label="' + escapeHtml(ariaLabel) + '" tabindex="0" data-name="' + escapeHtml(displayName) + '">' +
+        html += '<div class="tech-stack-tile' + (item.mono ? ' tech-stack-tile--mono' : '') + (isText ? ' tech-stack-tile--text' : '') + '" role="img" aria-label="' + escapeHtml(ariaLabel) + '" tabindex="0" data-name="' + escapeHtml(displayName) + '">' +
           '<div class="tech-stack-tile-surface"><div class="tech-stack-icon">' + inner + '</div></div></div>';
       });
       html += '</div></div>';

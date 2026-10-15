@@ -699,8 +699,17 @@ a.inline-link:hover { text-decoration: underline; }
 }
 .tech-stack-glyph--long {
   font-size: 0.6rem;
-  font-size: 19cqi;
+  font-size: 24cqi;
   letter-spacing: 0;
+}
+.tech-stack-glyph--xlong {
+  font-size: 0.55rem;
+  font-size: 21cqi;
+  letter-spacing: 0;
+}
+.tech-stack-panel .tech-group .tech-stack-tile--text .tech-stack-tile-surface,
+.landing-section .tech-stack-panel .tech-group .tech-stack-tile--text .tech-stack-tile-surface {
+  padding: 6%;
 }
 @media (max-width: 639px) {
   .tech-groups {

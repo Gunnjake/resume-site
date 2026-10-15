@@ -33,9 +33,10 @@
         { "name": "AWS Bedrock", "file": "bedrock-color.svg", "description": "Managed foundation models for RAG and AI systems." },
         { "name": "Claude Code", "file": "claude-color.svg", "description": "Claude Code and Claude on AWS Bedrock." },
         { "name": "ChatGPT", "file": "openai.svg", "mono": true, "description": "OpenAI's assistant for prototyping, debugging, and automation." },
+        { "name": "Agentic Workflows", "text": "Agentic", "colors": ["#f472b6", "#c084fc"], "description": "Multi-step AI agents that plan, call tools, and automate work." },
         { "name": "Ollama", "file": "ollama.svg", "mono": true, "description": "Local LLM inference." },
         { "name": "MCP", "displayName": "Model Context Protocol", "file": "mcp.svg", "mono": true, "description": "Connecting tools and integrations to AI agents." },
-        { "name": "RAG", "displayName": "Retrieval-Augmented Generation", "text": "RAG", "description": "Grounding LLM answers in your own documents." },
+        { "name": "RAG", "displayName": "Retrieval-Augmented Generation", "text": "RAG", "colors": ["#34d399", "#22d3ee"], "description": "Grounding LLM answers in your own documents." },
         { "name": "Python", "file": "python-color.svg", "description": "Primary language for AI, data, and backend work." }
       ]
     },
@@ -48,7 +49,7 @@
         { "name": "Linux", "file": "linux-color.svg" },
         { "name": "GitHub", "file": "github-color.svg", "mono": true, "description": "Version control hosting and collaboration." },
         { "name": "GitHub Actions", "file": "githubactions-color.svg", "description": "CI/CD pipelines." },
-        { "name": "CI/CD", "text": "CI/CD", "description": "Automated test and deployment pipelines." },
+        { "name": "CI/CD", "text": "CI/CD", "colors": ["#fbbf24", "#f97316"], "description": "Automated test and deployment pipelines." },
         { "name": "Vercel", "file": "vercel-color.svg", "mono": true, "description": "Deployment and hosting for web apps." }
       ]
     },
