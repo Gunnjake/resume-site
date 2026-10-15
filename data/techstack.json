@@ -32,6 +32,7 @@
       "items": [
         { "name": "AWS Bedrock", "file": "bedrock-color.svg", "description": "Managed foundation models for RAG and AI systems." },
         { "name": "Claude", "file": "claude-color.svg", "description": "Claude Code and Claude on AWS Bedrock." },
+        { "name": "ChatGPT", "displayName": "OpenAI ChatGPT", "file": "openai.svg", "mono": true, "description": "OpenAI's assistant for prototyping, debugging, and automation." },
         { "name": "Ollama", "file": "ollama.svg", "mono": true, "description": "Local LLM inference." },
         { "name": "MCP", "displayName": "Model Context Protocol", "file": "mcp.svg", "mono": true, "description": "Connecting tools and integrations to AI agents." },
         { "name": "RAG", "displayName": "Retrieval-Augmented Generation", "text": "RAG", "description": "Grounding LLM answers in your own documents." },
@@ -44,7 +45,7 @@
         { "name": "AWS", "file": "aws-color.svg", "description": "EC2, RDS, S3, and Bedrock." },
         { "name": "Docker", "file": "docker-color.svg" },
         { "name": "Linux", "file": "linux-color.svg" },
-        { "name": "Slurm", "file": "slurm-color.svg", "description": "HPC job scheduling for data pipelines." },
+        { "name": "GitHub", "file": "github-color.svg", "mono": true, "description": "Version control hosting and collaboration." },
         { "name": "GitHub Actions", "file": "githubactions-color.svg", "description": "CI/CD pipelines." },
         { "name": "Vercel", "file": "vercel-color.svg", "mono": true, "description": "Deployment and hosting for web apps." }
       ]

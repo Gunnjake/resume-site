@@ -617,16 +617,16 @@ a.inline-link:hover { text-decoration: underline; }
 
 /* --- Grouped tech stack (AI / Cloud / Programming) ---
    Tiles are sized as a fraction of the row and wrap inside their group, so
-   nothing can grow wider than the panel. Desktop fits 6 per row; phones fit
-   8 so each group is a single row. */
+   nothing can grow wider than the panel. 8 per row keeps every group
+   (7 / 6 / 8 tools) on a single line. */
 .tech-groups {
-  --tech-cols: 6;
-  --tech-gap: 8px;
+  --tech-cols: 8;
+  --tech-gap: 7px;
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
   width: 100%;
-  max-width: 380px;
+  max-width: 440px;
 }
 .tech-group-title {
   display: flex;
@@ -697,9 +697,45 @@ a.inline-link:hover { text-decoration: underline; }
   background-clip: text;
   color: transparent;
 }
+/* Hover label: the pseudo-element only exists while hovered, so it can never
+   widen the page at rest. Edge tiles anchor it inward. Touch screens skip it
+   and use the readout under the grid instead. */
+@media (hover: hover) {
+  .tech-group .tech-stack-tile:hover,
+  .tech-group .tech-stack-tile:focus-visible { z-index: 5; }
+  .tech-group .tech-stack-tile:hover::after,
+  .tech-group .tech-stack-tile:focus-visible::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 0.25rem 0.55rem;
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.96);
+    border: 1px solid rgba(129, 140, 248, 0.6);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    color: var(--text);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+  }
+  .tech-group .tech-stack-tile:nth-child(-n+2):hover::after,
+  .tech-group .tech-stack-tile:nth-child(-n+2):focus-visible::after {
+    left: 0;
+    transform: none;
+  }
+  .tech-group .tech-stack-tile:nth-last-child(-n+2):hover::after,
+  .tech-group .tech-stack-tile:nth-last-child(-n+2):focus-visible::after {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+}
 @media (max-width: 639px) {
   .tech-groups {
-    --tech-cols: 8;
     --tech-gap: 6px;
     max-width: none;
     gap: var(--space-3);
