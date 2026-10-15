@@ -416,7 +416,8 @@
   function renderSkillsPage(skills) {
     var html = '<div class="skills-grid reveal-stagger">';
     (skills.categories || []).forEach(function (cat) {
-      html += '<div class="skills-category card">' +
+      html += '<div class="skills-category card' + (cat.featured ? ' skills-category--featured' : '') + '">' +
+        (cat.featured ? '<span class="skills-featured-label">Primary Focus</span>' : '') +
         '<h2>' + escapeHtml(cat.name) + '</h2>' +
         (cat.meta ? '<p class="meta">' + escapeHtml(cat.meta) + '</p>' : '') +
         (cat.description ? '<p>' + escapeHtml(cat.description) + '</p>' : '') +

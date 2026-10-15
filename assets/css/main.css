@@ -1479,6 +1479,25 @@ a.inline-link:hover { text-decoration: underline; }
 }
 .skills-category h2 { margin-top: 0; margin-bottom: var(--space-2); }
 .skills-category .meta { margin-bottom: var(--space-4); }
+.skills-category--featured {
+  background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.32), transparent 60%), var(--card);
+  border: 1px solid rgba(129, 140, 248, 0.85);
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25), 0 18px 50px var(--accent-glow);
+  margin-bottom: var(--space-6);
+}
+.skills-category--featured h2 { font-size: 1.75rem; }
+.skills-featured-label {
+  align-self: flex-start;
+  margin-bottom: var(--space-3);
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: var(--accent-gradient);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 .certifications-section { margin-top: var(--space-10); }
 
 /* --- Contact page --- */

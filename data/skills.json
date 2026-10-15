@@ -22,6 +22,22 @@
   ],
   "categories": [
     {
+      "name": "AI & Automation",
+      "meta": "Agentic workflows, RAG, MCP, and LLM-powered automation",
+      "description": "My primary focus: building AI-integrated systems and automations—from RAG assistants on AWS Bedrock to agentic coding workflows with Claude Code, MCP servers, and local LLMs—and using them daily to build, automate, and ship full-stack software.",
+      "items": [
+        "**AI Tools:** Claude Code (terminal-based AI agent), ChatGPT, Cursor",
+        "**Agentic Workflows:** Custom agent workflows and multi-step AI automation",
+        "**MCP:** Model Context Protocol servers for connecting tools and external integrations to AI agents",
+        "**RAG & Cloud LLMs:** Retrieval-Augmented Generation pipelines with AWS Bedrock (Claude) and Amazon S3 document storage",
+        "**Local LLMs:** Ollama for on-device inference (e.g., qwen2.5-coder)",
+        "**AI Automation:** Lecture transcription and AI summary pipelines, LLM-generated trade explanations",
+        "**LLM Assistants:** Claude and ChatGPT for rapid prototyping, debugging, backend development, and workflow automation",
+        "**Workflow Automation:** n8n"
+      ],
+      "featured": true
+    },
+    {
       "name": "Programming & Application Development",
       "meta": "Backend, frontend, and full-stack development",
       "description": "Strong experience building full-stack applications, APIs, and data-driven systems using modern frameworks and clean architectural patterns.",
@@ -42,19 +58,6 @@
         "**Data Processing:** Polars, Excel, SQL-based data pipelines",
         "**Visualization:** Plotly, Tableau, Power BI",
         "**Analytics:** Performance metrics, time-series analysis, basic machine learning"
-      ]
-    },
-    {
-      "name": "AI-Assisted Development",
-      "meta": "Agentic workflows, RAG, MCP, and LLM tooling",
-      "description": "Daily use of terminal-based AI agents, the Model Context Protocol, retrieval-augmented generation, and cloud and local LLMs to build, automate, and ship full-stack systems.",
-      "items": [
-        "**Agentic Coding:** Claude Code (terminal-based AI agent), Cursor",
-        "**MCP:** Model Context Protocol servers for connecting tools and external integrations to AI agents",
-        "**RAG & Cloud LLMs:** Retrieval-Augmented Generation pipelines with AWS Bedrock (Claude) and Amazon S3 document storage",
-        "**Agents & Local LLMs:** Agentic workflows, Ollama for on-device inference (e.g., qwen2.5-coder)",
-        "**LLM Assistants:** Claude and ChatGPT for rapid prototyping, debugging, backend development, and workflow automation",
-        "**Workflow Automation:** n8n"
       ]
     },
     {
