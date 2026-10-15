@@ -76,6 +76,16 @@
           ]
         },
         {
+          "title": "AI Knowledge Assistant",
+          "paragraphs": [
+            "As part of the fund's AI system development, I'm developing the Silver Fund AI Knowledge Assistant: a Retrieval-Augmented Generation (RAG) chatbot being built to give fund members natural-language access to the fund's financial documentation, using Python, Claude on Amazon Bedrock, and Amazon S3."
+          ],
+          "link": {
+            "href": "projects/silver-fund-ai-assistant.html",
+            "text": "View the AI Knowledge Assistant project →"
+          }
+        },
+        {
           "title": "Frontend & User Experience Contributions",
           "list": [
             "Built and enhanced dashboard features such as performance charts, data tables, filtering controls, and CSV export actions.",

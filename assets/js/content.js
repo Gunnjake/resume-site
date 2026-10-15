@@ -424,6 +424,13 @@
       if (sec.clientProjects && sec.clientProjects.length) {
         html += renderClientProjects(sec.clientProjects);
       }
+      if (sec.link && sec.link.href) {
+        var linkHref = String(sec.link.href).trim();
+        var external = /^https?:/i.test(linkHref);
+        html += '<p><a class="details-btn" href="' + escapeHtml(external ? linkHref : basePath + linkHref) + '"' +
+          (external ? ' target="_blank" rel="noopener noreferrer"' : '') + '>' +
+          escapeHtml(sec.link.text || 'View details') + '</a></p>';
+      }
       if (sec.subsections && sec.subsections.length) {
         sec.subsections.forEach(function (sub) {
           if (sub.title) html += '<h3 class="experience-subsection-title">' + escapeHtml(sub.title) + '</h3>';
