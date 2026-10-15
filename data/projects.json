@@ -6,7 +6,7 @@
       "subtitle": "RAG chatbot over the fund's financial documentation",
       "shortDescription": "A Retrieval-Augmented Generation (RAG) chatbot built with Python, AWS Bedrock (Claude), and Amazon S3 that gives BYU Silver Fund members natural-language access to the fund's financial documentation.",
       "technologies": ["Python", "AWS Bedrock", "Claude", "Amazon S3", "RAG"],
-      "featured": false,
+      "featured": true,
       "year": "2026 – Present",
       "sections": [
         {
@@ -320,7 +320,7 @@
       "subtitle": "Two rule-based stock trading bots built on the Alpaca API",
       "shortDescription": "Two iterations of an automated stock trading bot built on Alpaca paper trading. The first is a Flask-based momentum/trend trader; the second is a FastAPI service that scans 300+ symbols with technical indicators and uses a local LLM to explain its trades. Both are rule-based and run in paper or simulated mode.",
       "technologies": ["Python", "Alpaca API", "FastAPI", "Flask", "pandas", "Ollama (local LLM)", "Chart.js"],
-      "featured": true,
+      "featured": false,
       "year": "2026",
       "sections": [
         {
