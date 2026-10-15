@@ -26,11 +26,11 @@
       "meta": "Backend, frontend, and full-stack development",
       "description": "Strong experience building full-stack applications, APIs, and data-driven systems using modern frameworks and clean architectural patterns.",
       "items": [
-        "**Languages:** Python, JavaScript (Node.js), SQL, C#, HTML/CSS",
+        "**Languages:** Python, SQL, JavaScript (Node.js), C#, HTML/CSS",
         "**Frameworks:** FastAPI, Express, Flask, React, Next.js, EJS",
         "**Databases:** PostgreSQL, SQLite, Supabase, database design, normalization",
         "**SQL:** Complex joins, CTEs, window functions, aggregations, query optimization",
-        "**Backend & APIs:** RESTful APIs, API design, authentication, authorization, data pipelines",
+        "**Backend & APIs:** REST APIs, API design, authentication, authorization, data pipelines",
         "**Styling:** Tailwind CSS, Bootstrap"
       ]
     },
@@ -46,12 +46,13 @@
     },
     {
       "name": "AI-Assisted Development",
-      "meta": "Agentic coding tools, MCP, and LLM workflows",
-      "description": "Daily use of terminal-based AI agents, the Model Context Protocol, and local LLMs to build, debug, and ship full-stack systems.",
+      "meta": "Agentic workflows, RAG, MCP, and LLM tooling",
+      "description": "Daily use of terminal-based AI agents, the Model Context Protocol, retrieval-augmented generation, and cloud and local LLMs to build, automate, and ship full-stack systems.",
       "items": [
         "**Agentic Coding:** Claude Code (terminal-based AI agent), Cursor",
         "**MCP:** Model Context Protocol servers for connecting tools and external integrations to AI agents",
-        "**Agents & Local LLMs:** Custom agent workflows, Ollama for on-device inference (e.g., qwen2.5-coder)",
+        "**RAG & Cloud LLMs:** Retrieval-Augmented Generation pipelines with AWS Bedrock (Claude) and Amazon S3 document storage",
+        "**Agents & Local LLMs:** Agentic workflows, Ollama for on-device inference (e.g., qwen2.5-coder)",
         "**LLM Assistants:** Claude and ChatGPT for rapid prototyping, debugging, backend development, and workflow automation",
         "**Workflow Automation:** n8n"
       ]
@@ -63,7 +64,7 @@
       "items": [
         "**Operating Systems:** Linux, Windows, macOS",
         "**IT Skills:** System administration, network configuration, troubleshooting",
-        "**Automation:** Process automation, workflow tools (e.g., n8n)"
+        "**Automation:** Process automation, scheduled pipelines (Slurm, cron), workflow tools (e.g., n8n)"
       ]
     },
     {
@@ -72,8 +73,8 @@
       "description": "Experience working in collaborative development environments with version control, cloud infrastructure, and production deployment workflows.",
       "items": [
         "**Version Control:** Git, GitHub",
-        "**Cloud:** AWS (EC2, RDS, S3), Vercel, Azure",
-        "**Infrastructure:** Docker, Nginx, Linux",
+        "**Cloud:** AWS (EC2, RDS, S3, Bedrock), Vercel, Azure",
+        "**Infrastructure:** Linux, Docker, Nginx, Slurm job scheduling, high-performance computing",
         "**CI/CD:** GitHub Actions, automated test and deployment pipelines",
         "**Development Tools:** VS Code, Microsoft 365, Google Workspace"
       ]
@@ -83,7 +84,7 @@
       "meta": "Spoken languages",
       "items": [
         "Fluent in Tagalog",
-        "Conversant in Bicolano"
+        "Conversational in Bicolano"
       ]
     },
     {
@@ -91,8 +92,8 @@
       "meta": "Outside of work",
       "items": [
         "Varsity, club, and travel lacrosse",
-        "Working out and watching college basketball",
-        "Researching stocks, crypto, and real estate"
+        "Fitness and college basketball",
+        "Stock market investing, cryptocurrency, and real estate"
       ]
     }
   ],

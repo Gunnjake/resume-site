@@ -292,7 +292,12 @@
     }
     (project.sections || []).forEach(function (sec) {
       html += '<section class="project-section reveal"><h2>' + escapeHtml(sec.title) + '</h2>';
-      if (sec.paragraphs) sec.paragraphs.forEach(function (para) { html += '<p>' + escapeHtml(para) + '</p>'; });
+      if (sec.overviewLink && sec.paragraphs && sec.paragraphs[0]) {
+        html += '<p><a href="' + escapeHtml(sec.overviewLink.url) + '" class="inline-link" target="_blank" rel="noopener noreferrer">' + escapeHtml(sec.overviewLink.text) + '</a> ' + escapeHtml(sec.paragraphs[0]) + '</p>';
+        sec.paragraphs.slice(1).forEach(function (para) { html += '<p>' + escapeHtml(para) + '</p>'; });
+      } else if (sec.paragraphs) {
+        sec.paragraphs.forEach(function (para) { html += '<p>' + escapeHtml(para) + '</p>'; });
+      }
       if (sec.list) {
         html += '<ul>';
         sec.list.forEach(function (li) { html += '<li>' + escapeHtml(li) + '</li>'; });

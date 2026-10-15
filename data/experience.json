@@ -38,63 +38,13 @@
       ]
     },
     {
-      "slug": "summit-stack-co",
-      "role": "Founder & Full Stack Developer",
-      "organization": "Summit Stack Co.",
-      "dateRange": "May 2026 – Present",
-      "location": "Remote",
-      "summary": "Independent web and software development studio focused on building modern websites, business platforms, and operational tools for small businesses and professional firms.",
-      "technologies": ["React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Vercel", "GitHub", "HTML/CSS", "Tailwind CSS"],
-      "featured": false,
-      "logoPath": "assets/img/logos/Logo%20with%20words.png",
-      "logoAlt": "Summit Stack Co. Logo",
-      "sections": [
-        {
-          "title": "Overview",
-          "paragraphs": [
-            "Summit Stack Co. is an independent development studio focused on building professional websites, modern business platforms, and operational tools for small businesses and professional firms. Work includes frontend development, backend integrations, deployment infrastructure, hosting configuration, compliance implementation, and ongoing platform improvements."
-          ],
-          "overviewLink": { "url": "https://summitstackco.com/", "text": "Summit Stack Co." }
-        },
-        {
-          "title": "Services / Focus Areas",
-          "list": [
-            "Business website development",
-            "Custom frontend interfaces",
-            "Backend integrations and forms",
-            "Hosting and deployment setup",
-            "Domain and DNS configuration",
-            "Mobile responsive design",
-            "Compliance-focused implementations",
-            "Operational workflow systems"
-          ]
-        },
-        {
-          "title": "Featured Client Work",
-          "clientProjects": [
-            {
-              "title": "Guns Law Website & Compliance Platform",
-              "description": "Designed and deployed a professional law firm website with mobile-responsive layouts, contact workflows, and SMS compliance implementation support. Assisted with frontend redesigns, hosting configuration, deployment workflows, and compliance-related content integration for A2P messaging requirements.",
-              "technologies": ["Next.js", "Vercel", "HTML/CSS", "Responsive Design", "Form Integrations"],
-              "image": "assets/img/summit%20stack%20co/Gunslaw.png",
-              "link": { "href": "https://gunslaw.com/", "text": "Visit Site" }
-            }
-          ]
-        },
-        {
-          "title": "Technologies Used",
-          "paragraphs": ["React, Next.js, TypeScript, Supabase, PostgreSQL, Vercel, GitHub, HTML/CSS, Tailwind CSS"]
-        }
-      ]
-    },
-    {
       "slug": "silver-fund",
-      "role": "Full-Stack Software Engineer | Quant Team Developer",
+      "role": "Full-Stack Software Engineer | Quant Fund Developer",
       "organization": "BYU Silver Fund",
       "dateRange": "Nov 2025 – Present",
       "location": "Provo, UT",
-      "summary": "Maintain and extend a production-grade investment analytics platform used by student portfolio managers to evaluate performance, analyze time-series data, and support live investment decisions.",
-      "technologies": ["Python", "FastAPI", "React", "TypeScript", "PostgreSQL", "Polars", "AWS", "AWS Amplify", "Figma"],
+      "summary": "Maintain and extend a production-grade investment analytics platform used by student portfolio managers, manage the fund's financial data infrastructure and automated pipelines across Linux servers, AWS, and high-performance computing, and support AI system development for internal research.",
+      "technologies": ["Python", "FastAPI", "React", "TypeScript", "PostgreSQL", "Polars", "AWS", "AWS Amplify", "Figma", "Linux", "Slurm", "AWS Bedrock"],
       "featured": true,
       "logoPath": "assets/img/logos/silverfund.png",
       "logoAlt": "Silver Fund Logo",
@@ -104,7 +54,7 @@
           "paragraphs": [
             "BYU Silver Fund is one of the oldest and largest student-run investment funds in the United States, managed entirely by students across finance, accounting, economics, mathematics, and computer science under faculty supervision in the Marriott School of Business. Students conduct original research, make live investment decisions, and are directly accountable for fund performance. Alumni of the program have gone on to leadership roles across top firms in the finance industry.",
             "As a Full Stack Engineer, I maintain and extend a production-grade investment analytics platform that supports multiple student-managed funds, including an undergraduate fundamental fund, a graduate fundamental fund, and a quantitative fund. The platform is used weekly by portfolio managers and analysts to evaluate performance, analyze time-series data, and support investment decisions.",
-            "I also serve as a developer on the Silver Fund Quant Team, supporting the quantitative systems, supercomputing workflows, cloud infrastructure, financial data pipelines, and portfolio analytics used in fund research and investment decision-making."
+            "I also serve as a developer on the Silver Fund Quant Fund team, managing financial data infrastructure and automated pipelines across Linux servers, AWS, and high-performance computing systems, and supporting the AI system development and document-processing infrastructure used for internal financial research and knowledge management."
           ],
           "overviewLink": { "url": "https://silverfund.byu.edu", "text": "BYU Silver Fund" }
         },
@@ -116,6 +66,10 @@
             "Work directly with the production database, writing and optimizing queries and supporting data processing pipelines using Polars to handle portfolio returns, benchmarks, and historical performance data.",
             "Architected Python ETL pipelines using Polars to automate financial data processing and improve backend performance.",
             "Designed RESTful API endpoints enabling portfolio analytics, reporting, and financial data exports.",
+            "Developed and maintained full-stack applications and REST APIs using FastAPI, React, PostgreSQL, and Python.",
+            "Manage financial data infrastructure and automated pipelines across Linux servers, AWS, and high-performance computing systems.",
+            "Implemented Slurm-based job scheduling to automate financial data pipelines across multiple database environments, allocating dedicated computing resources for resource-intensive workloads.",
+            "Support AI system development and document-processing infrastructure for internal financial research and knowledge management, including the Silver Fund AI Knowledge Assistant.",
             "Contribute to frontend development by improving UI and UX across dashboards, including interactive charts, tables, filters, and CSV download functionality used by portfolio managers.",
             "Collaborate closely with a multidisciplinary engineering team through weekly team meetings, shared planning, and coordinated development cycles to deliver features aligned with fund needs.",
             "Participate in structured Git workflows by reviewing pull requests, providing technical feedback, and submitting PRs to maintain code quality and consistency across the codebase."
@@ -159,7 +113,7 @@
           "title": "Engineering Practices & Infrastructure",
           "list": [
             "Platform is hosted on AWS, with exposure to production cloud infrastructure and environment configuration.",
-            "Built pipeline monitoring and automated Slack failure alerts to improve visibility into data and deployment failures.",
+            "Built automated pipeline monitoring and Slack failure alerts to identify production issues, accelerate troubleshooting, and improve operational reliability.",
             "Work with live databases and real investment data in a controlled production environment.",
             "Participate in regular code reviews, pull request discussions, and team design decisions.",
             "Engage in weekly team meetings to plan work, discuss issues, and align engineering priorities with fund needs."
@@ -167,7 +121,59 @@
         },
         {
           "title": "Technologies Used",
-          "paragraphs": ["FastAPI, React, TypeScript, PostgreSQL, Polars, AWS, AWS Amplify, Git, GitHub, Linux, Figma"]
+          "paragraphs": [
+            "FastAPI, React, TypeScript, PostgreSQL, Polars, Python, AWS, AWS Amplify, AWS Bedrock, Slurm, Git, GitHub, Linux, Figma"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "summit-stack-co",
+      "role": "Founder & Full Stack Developer",
+      "organization": "Summit Stack Co.",
+      "dateRange": "May 2026 – Present",
+      "location": "Remote",
+      "summary": "Independent web and software development studio focused on building modern websites, business platforms, and operational tools for small businesses and professional firms.",
+      "technologies": ["React", "Next.js", "TypeScript", "Supabase", "PostgreSQL", "Vercel", "GitHub", "HTML/CSS", "Tailwind CSS"],
+      "featured": false,
+      "logoPath": "assets/img/logos/Logo%20with%20words.png",
+      "logoAlt": "Summit Stack Co. Logo",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Summit Stack Co. is an independent development studio focused on building professional websites, modern business platforms, and operational tools for small businesses and professional firms. Work includes frontend development, backend integrations, deployment infrastructure, hosting configuration, compliance implementation, and ongoing platform improvements."
+          ],
+          "overviewLink": { "url": "https://summitstackco.com/", "text": "Summit Stack Co." }
+        },
+        {
+          "title": "Services / Focus Areas",
+          "list": [
+            "Business website development",
+            "Custom frontend interfaces",
+            "Backend integrations and forms",
+            "Hosting and deployment setup",
+            "Domain and DNS configuration",
+            "Mobile responsive design",
+            "Compliance-focused implementations",
+            "Operational workflow systems"
+          ]
+        },
+        {
+          "title": "Featured Client Work",
+          "clientProjects": [
+            {
+              "title": "Guns Law Website & Compliance Platform",
+              "description": "Designed and deployed a professional law firm website with mobile-responsive layouts, contact workflows, and SMS compliance implementation support. Assisted with frontend redesigns, hosting configuration, deployment workflows, and compliance-related content integration for A2P messaging requirements. Integrated Supabase and Resend for cloud database and email services, with a scheduled cron job that keeps the free-tier database from going inactive.",
+              "technologies": ["Next.js", "Vercel", "HTML/CSS", "Responsive Design", "Form Integrations", "Supabase", "Resend"],
+              "image": "assets/img/summit%20stack%20co/Gunslaw.png",
+              "link": { "href": "https://gunslaw.com/", "text": "Visit Site" }
+            }
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": ["React, Next.js, TypeScript, Supabase, PostgreSQL, Vercel, GitHub, HTML/CSS, Tailwind CSS"]
         }
       ]
     },

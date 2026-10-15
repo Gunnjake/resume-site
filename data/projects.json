@@ -1,6 +1,115 @@
 {
   "projects": [
     {
+      "slug": "silver-fund-ai-assistant",
+      "title": "Silver Fund AI Knowledge Assistant",
+      "subtitle": "RAG chatbot over the fund's financial documentation",
+      "shortDescription": "A Retrieval-Augmented Generation (RAG) chatbot built with Python, AWS Bedrock (Claude), and Amazon S3 that gives BYU Silver Fund members natural-language access to the fund's financial documentation.",
+      "technologies": ["Python", "AWS Bedrock", "Claude", "Amazon S3", "RAG"],
+      "featured": false,
+      "year": "2026 – Present",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Developing a Retrieval-Augmented Generation (RAG) chatbot for the BYU Silver Fund. The assistant uses Python, AWS Bedrock (Claude), and Amazon S3, integrating document processing and retrieval workflows so fund members can ask questions in plain language and get answers grounded in the fund's financial documentation.",
+            "The project is part of my Silver Fund work supporting AI system development and document-processing infrastructure for internal financial research and knowledge management."
+          ]
+        },
+        {
+          "title": "Key Features",
+          "list": [
+            "Document processing workflow that prepares the fund's financial documentation for retrieval, with source documents stored in Amazon S3.",
+            "Retrieval workflow that finds the passages relevant to a member's question before the model answers.",
+            "Answer generation with Claude on AWS Bedrock, grounded in the retrieved documentation.",
+            "Natural-language interface that gives fund members fast access to institutional knowledge without searching documents by hand."
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": [
+            "Python, AWS Bedrock (Claude), Amazon S3, Retrieval-Augmented Generation (RAG)"
+          ]
+        },
+        {
+          "title": "Status",
+          "paragraphs": ["In active development (2026 – present)."]
+        }
+      ]
+    },
+    {
+      "slug": "ai-lecture-automation",
+      "title": "AI Lecture Processing Automation",
+      "subtitle": "One-click pipeline from recorded lecture to organized notes",
+      "shortDescription": "A one-click desktop automation workflow that processes recorded lectures—renaming files, generating transcripts and AI-powered summaries, and organizing the outputs into designated folders.",
+      "technologies": ["AI Transcription", "LLM Summaries", "Workflow Automation"],
+      "featured": false,
+      "year": "2026",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Built a one-click desktop automation workflow that turns recorded lectures into organized, searchable study material. A single click runs the whole pipeline: the recordings are renamed, transcribed, summarized with AI, and filed away without any manual steps."
+          ]
+        },
+        {
+          "title": "Key Features",
+          "list": [
+            "One-click desktop launcher that runs the entire workflow end to end.",
+            "Automatic, consistent file renaming for recorded lectures.",
+            "Transcript generation for each recording.",
+            "AI-powered summaries of each lecture.",
+            "Outputs organized automatically into designated folders."
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": [
+            "Workflow automation, AI transcription, LLM-generated summaries, desktop scripting"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gunslaw",
+      "title": "Guns Law Website & Compliance Platform (J. Gunnell Law, LLC)",
+      "subtitle": "Law firm website and compliance platform · Summit Stack Co. client work",
+      "shortDescription": "Designed and deployed a professional law firm website with mobile-responsive layouts, contact workflows, and SMS compliance implementation support. Assisted with frontend redesigns, hosting configuration, deployment workflows, and compliance-related content integration for A2P messaging requirements. Integrated Supabase and Resend for cloud database and email services, with a scheduled cron job that keeps the free-tier database from going inactive.",
+      "technologies": ["Next.js", "Vercel", "HTML/CSS", "Responsive Design", "Form Integrations", "Supabase", "Resend", "Cron Jobs"],
+      "featured": false,
+      "year": "2026 – Present",
+      "heroImage": "assets/img/summit%20stack%20co/Gunslaw.png",
+      "heroCaption": "gunslaw.com — the J. Gunnell Law, LLC website.",
+      "sections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "— the J. Gunnell Law, LLC website, built through Summit Stack Co. Designed and deployed a professional law firm website with mobile-responsive layouts, contact workflows, and SMS compliance implementation support. Assisted with frontend redesigns, hosting configuration, deployment workflows, and compliance-related content integration for A2P messaging requirements. Integrated Supabase and Resend for cloud database and email services, with a scheduled cron job that keeps the free-tier database from going inactive."
+          ],
+          "overviewLink": {
+            "url": "https://gunslaw.com/",
+            "text": "gunslaw.com"
+          }
+        },
+        {
+          "title": "Key Features",
+          "list": [
+            "Professional law firm website with mobile-responsive layouts and contact workflows.",
+            "SMS compliance implementation support and compliance-related content integration for A2P messaging requirements.",
+            "Frontend redesigns, hosting configuration, and deployment workflows on Vercel.",
+            "Supabase cloud database and Resend email integration.",
+            "Scheduled cron job that keeps the free-tier Supabase database from being paused for inactivity."
+          ]
+        },
+        {
+          "title": "Technologies Used",
+          "paragraphs": [
+            "Next.js, Vercel, HTML/CSS, Responsive Design, Form Integrations, Supabase, Resend, Cron Jobs"
+          ]
+        }
+      ]
+    },
+    {
       "slug": "beacon-nonprofit-analytics",
       "title": "BEACON Nonprofit Analytics Platform (INTEX Project)",
       "subtitle": "Data-driven nonprofit operations and donor analytics",
