@@ -697,6 +697,11 @@ a.inline-link:hover { text-decoration: underline; }
   background-clip: text;
   color: transparent;
 }
+.tech-stack-glyph--long {
+  font-size: 0.6rem;
+  font-size: 19cqi;
+  letter-spacing: 0;
+}
 @media (max-width: 639px) {
   .tech-groups {
     --tech-gap: 6px;

@@ -191,7 +191,8 @@
           var iconPath = file.indexOf('/') === -1 ? ('assets/img/techstack/' + file) : file;
           inner = '<img src="' + basePath + iconPath + '" alt="" role="presentation" loading="lazy">';
         } else {
-          inner = '<span class="tech-stack-glyph">' + escapeHtml(item.text) + '</span>';
+          var glyph = String(item.text);
+          inner = '<span class="tech-stack-glyph' + (glyph.length > 3 ? ' tech-stack-glyph--long' : '') + '">' + escapeHtml(glyph) + '</span>';
         }
         html += '<div class="tech-stack-tile' + (item.mono ? ' tech-stack-tile--mono' : '') + '" role="img" aria-label="' + escapeHtml(ariaLabel) + '" tabindex="0" data-name="' + escapeHtml(displayName) + '">' +
           '<div class="tech-stack-tile-surface"><div class="tech-stack-icon">' + inner + '</div></div></div>';
