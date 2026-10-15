@@ -626,7 +626,7 @@ a.inline-link:hover { text-decoration: underline; }
   flex-direction: column;
   gap: var(--space-4);
   width: 100%;
-  max-width: 440px;
+  max-width: 520px;
 }
 .tech-group-title {
   display: flex;
@@ -1023,8 +1023,8 @@ a.inline-link:hover { text-decoration: underline; }
   }
   .landing-section .hero-and-tech {
     align-items: start;
-    grid-template-columns: minmax(0, 2.125fr) minmax(0, 1fr);
-    gap: var(--space-12);
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    gap: var(--space-10);
   }
   .hero-and-tech .hero-wrap {
     width: 100%;
@@ -1278,6 +1278,22 @@ a.inline-link:hover { text-decoration: underline; }
   .highlights-grid { grid-template-columns: repeat(3, 1fr); }
 }
 .highlight-card .tags-wrap { margin-bottom: 0; }
+/* Featured cards are whole-card links; say so on the card. */
+.highlight-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: var(--space-4);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: gap var(--duration-fast), color var(--duration-fast);
+}
+.card-link:hover .highlight-card-cta,
+.card-link:focus-visible .highlight-card-cta {
+  gap: 0.6rem;
+  color: var(--accent-hover);
+}
 
 /* --- Separator between hero and Featured Experience --- */
 .landing-section .landing-sep {

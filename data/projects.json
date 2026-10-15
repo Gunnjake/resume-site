@@ -4,7 +4,7 @@
       "slug": "silver-fund-ai-assistant",
       "title": "Silver Fund AI Knowledge Assistant",
       "subtitle": "RAG chatbot over the fund's financial documentation",
-      "shortDescription": "A Retrieval-Augmented Generation (RAG) chatbot built with Python, AWS Bedrock (Claude), and Amazon S3 that gives BYU Silver Fund members natural-language access to the fund's financial documentation.",
+      "shortDescription": "A Retrieval-Augmented Generation (RAG) chatbot being developed to give BYU Silver Fund members natural-language access to the fund's financial documentation, retrieving relevant passages from documents in Amazon S3 and answering with Claude on Amazon Bedrock.",
       "technologies": ["Python", "AWS Bedrock", "Claude", "Amazon S3", "RAG"],
       "featured": true,
       "year": "2026 – Present",
@@ -12,23 +12,38 @@
         {
           "title": "Overview",
           "paragraphs": [
-            "Developing a Retrieval-Augmented Generation (RAG) chatbot for the BYU Silver Fund. The assistant uses Python, AWS Bedrock (Claude), and Amazon S3, integrating document processing and retrieval workflows so fund members can ask questions in plain language and get answers grounded in the fund's financial documentation.",
+            "Developing a Retrieval-Augmented Generation (RAG) chatbot for the BYU Silver Fund. The assistant is being built to let fund members ask questions in plain language and get answers grounded in the fund's financial documentation, using Python, Claude on Amazon Bedrock, and Amazon S3.",
             "The project is part of my Silver Fund work supporting AI system development and document-processing infrastructure for internal financial research and knowledge management."
           ]
         },
         {
-          "title": "Key Features",
+          "title": "The Problem",
+          "paragraphs": [
+            "The fund's knowledge lives in its financial documentation. Finding an answer means knowing which document to open and searching it by hand. The assistant is meant to let members ask a question directly and get an answer drawn from those documents."
+          ]
+        },
+        {
+          "title": "Architecture",
           "list": [
-            "Document processing workflow that prepares the fund's financial documentation for retrieval, with source documents stored in Amazon S3.",
-            "Retrieval workflow that finds the passages relevant to a member's question before the model answers.",
-            "Answer generation with Claude on AWS Bedrock, grounded in the retrieved documentation.",
-            "Natural-language interface that gives fund members fast access to institutional knowledge without searching documents by hand."
+            "Storage: the fund's source documents are stored in Amazon S3.",
+            "Document processing: documents are processed and prepared so relevant passages can be retrieved.",
+            "Retrieval: when a member asks a question, the retrieval workflow finds the passages most relevant to it.",
+            "Generation: Claude on Amazon Bedrock writes the answer, grounded in the retrieved passages rather than the model's general knowledge."
+          ]
+        },
+        {
+          "title": "What I'm Building",
+          "list": [
+            "The document-processing workflow that prepares the fund's documentation for retrieval.",
+            "The retrieval workflow that selects relevant passages for each question.",
+            "The integration with Claude on Amazon Bedrock that turns retrieved passages into answers.",
+            "The natural-language interface fund members use to ask questions."
           ]
         },
         {
           "title": "Technologies Used",
           "paragraphs": [
-            "Python, AWS Bedrock (Claude), Amazon S3, Retrieval-Augmented Generation (RAG)"
+            "Python, Amazon Bedrock (Claude), Amazon S3, Retrieval-Augmented Generation (RAG)"
           ]
         },
         {

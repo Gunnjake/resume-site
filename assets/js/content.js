@@ -281,7 +281,8 @@
       '<p>' + escapeHtml(desc) + '</p>' +
       (tags ? '<div class="tags-wrap">' + tags + '</div>' : '');
     if (href) {
-      return '<a href="' + escapeHtml(href) + '" class="card card-link highlight-card">' + inner + '</a>';
+      return '<a href="' + escapeHtml(href) + '" class="card card-link highlight-card">' + inner +
+        '<span class="highlight-card-cta">View details <span aria-hidden="true">→</span></span></a>';
     }
     return '<div class="card highlight-card">' + inner + '</div>';
   }
