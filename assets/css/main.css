@@ -711,6 +711,52 @@ a.inline-link:hover { text-decoration: underline; }
 .landing-section .tech-stack-panel .tech-group .tech-stack-tile--text .tech-stack-tile-surface {
   padding: 6%;
 }
+/* Name label on hover / keyboard focus. The pseudo-element only exists
+   while active, so it can never widen the page at rest; it wraps at 220px,
+   and tiles near a row's ends anchor it inward so it stays on screen. */
+.tech-group .tech-stack-tile:hover,
+.tech-group .tech-stack-tile:focus-visible { z-index: 5; }
+.tech-group .tech-stack-tile:focus-visible { outline: none; }
+.tech-group .tech-stack-tile:focus-visible .tech-stack-tile-surface {
+  border-color: rgba(129, 140, 248, 0.9);
+  box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.6);
+}
+.tech-group .tech-stack-tile:hover::after,
+.tech-group .tech-stack-tile:focus-visible::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 220px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.97);
+  border: 1px solid rgba(129, 140, 248, 0.6);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  text-align: center;
+  white-space: normal;
+  pointer-events: none;
+}
+.tech-group .tech-stack-tile:nth-child(-n+3):hover::after,
+.tech-group .tech-stack-tile:nth-child(-n+3):focus-visible::after {
+  left: 0;
+  transform: none;
+  text-align: left;
+}
+.tech-group .tech-stack-tile:nth-last-child(-n+3):hover::after,
+.tech-group .tech-stack-tile:nth-last-child(-n+3):focus-visible::after {
+  left: auto;
+  right: 0;
+  transform: none;
+  text-align: right;
+}
 @media (max-width: 639px) {
   .tech-groups {
     --tech-gap: 6px;

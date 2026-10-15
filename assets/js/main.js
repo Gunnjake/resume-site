@@ -59,7 +59,10 @@
   }
 
   function initTechStackHighlight() {
-    var grid = document.querySelector('.tech-groups') || document.querySelector('.tech-stack-grid');
+    /* The grouped layout labels each tile itself on hover/focus (CSS), so
+       the auto-cycling spotlight and readout only apply to the old grid. */
+    if (document.querySelector('.tech-groups')) return;
+    var grid = document.querySelector('.tech-stack-grid');
     if (!grid) return;
 
     var panel = grid.closest('.tech-stack-panel');

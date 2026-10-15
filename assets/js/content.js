@@ -173,7 +173,8 @@
 
   /* Grouped tech stack: data/techstack.json "groups". Logos keep their brand
      colors; "mono" items are black marks flipped to white, and "text" items
-     are concepts with no logo (RAG, SQL) rendered as a lettered tile. */
+     are concepts with no logo (RAG, SQL) rendered as a lettered tile. Each
+     tile's name shows in its own label on hover or keyboard focus (CSS). */
   function renderTechStackGroups(stack) {
     var html = '<div class="tech-groups reveal-stagger">';
     stack.groups.forEach(function (group) {
@@ -205,10 +206,7 @@
       });
       html += '</div></div>';
     });
-    html += '</div>' +
-      '<div class="tech-stack-side">' +
-      '<p class="tech-stack-active-name" data-default="Hover a tool icon" aria-live="polite">Hover a tool icon</p>' +
-      '</div>';
+    html += '</div>';
     return html;
   }
 
