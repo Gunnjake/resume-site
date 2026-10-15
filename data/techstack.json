@@ -19,7 +19,12 @@
     { "name": "CSS", "file": "css.svg", "category": "Languages" },
     { "name": "Vite", "file": "vite.svg", "category": "Tools" },
     { "name": "Tailscale", "file": "tailscale.svg", "category": "Tools" },
-    { "name": "Tailwind CSS", "file": "tailwind.svg", "category": "Frameworks" }
+    { "name": "Tailwind CSS", "file": "tailwind.svg", "category": "Frameworks" },
+    { "name": "AWS", "file": "aws.svg", "category": "Cloud", "description": "EC2, RDS, S3, and Bedrock for cloud infrastructure and AI." },
+    { "name": "Claude", "file": "claude.svg", "category": "AI", "description": "Claude Code and Claude on AWS Bedrock for agentic workflows and RAG." },
+    { "name": "Supabase", "file": "supabase.svg", "category": "Databases", "description": "Hosted PostgreSQL, auth, and storage." },
+    { "name": "Next.js", "file": "nextjs.svg", "category": "Frameworks", "description": "React framework for full-stack web apps." },
+    { "name": "Vercel", "file": "vercel.svg", "category": "Cloud", "description": "Deployment and hosting for web apps." }
   ]
 }
 

@@ -140,7 +140,7 @@
       return name && file;
     });
     shuffleArray(items);
-    var totalCells = 20;
+    var totalCells = 25;
     var padded = items.slice(0, totalCells);
     while (padded.length < totalCells) { padded.push(null); }
     var html = '<div class="tech-stack-grid tech-stack-matrix reveal-stagger">';
