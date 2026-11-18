@@ -402,6 +402,26 @@
     return html + '</div>';
   }
 
+  // Optional per-image fields: width/height (intrinsic px, reserves space),
+  // loading ("lazy"), and fullSizeLink (wraps the image in a link to the file
+  // so small text, e.g. in a diagram, can be opened and zoomed on a phone).
+  function renderExperienceFigures(images) {
+    var html = '<div class="feature-grid experience-feature-grid">';
+    images.forEach(function (img) {
+      var src = basePath + img.src;
+      var tag = '<img src="' + src + '" alt="' + escapeHtml(img.alt) + '"' +
+        (img.width ? ' width="' + Number(img.width) + '"' : '') +
+        (img.height ? ' height="' + Number(img.height) + '"' : '') +
+        (img.loading ? ' loading="' + escapeHtml(img.loading) + '"' : '') + '>';
+      if (img.fullSizeLink) {
+        tag = '<a class="figure-link" href="' + src + '" target="_blank" rel="noopener">' + tag + '</a>';
+      }
+      html += '<figure>' + tag +
+        (img.caption ? '<figcaption>' + escapeHtml(img.caption) + '</figcaption>' : '') + '</figure>';
+    });
+    return html + '</div>';
+  }
+
   function renderExperienceDetail(exp) {
     var html = '<header class="detail-page-header reveal">';
     if (exp.logoPath) html += '<img src="' + basePath + exp.logoPath + '" class="detail-logo" alt="' + escapeHtml(exp.logoAlt || exp.organization) + '">';
@@ -424,6 +444,7 @@
       if (sec.clientProjects && sec.clientProjects.length) {
         html += renderClientProjects(sec.clientProjects);
       }
+      if (sec.images && sec.images.length) html += renderExperienceFigures(sec.images);
       if (sec.link && sec.link.href) {
         var linkHref = String(sec.link.href).trim();
         var external = /^https?:/i.test(linkHref);
@@ -440,14 +461,7 @@
             sub.list.forEach(function (li) { html += '<li>' + escapeHtml(li) + '</li>'; });
             html += '</ul>';
           }
-          if (sub.images && sub.images.length) {
-            html += '<div class="feature-grid experience-feature-grid">';
-            sub.images.forEach(function (img) {
-              html += '<figure><img src="' + basePath + img.src + '" alt="' + escapeHtml(img.alt) + '">' +
-                (img.caption ? '<figcaption>' + escapeHtml(img.caption) + '</figcaption>' : '') + '</figure>';
-            });
-            html += '</div>';
-          }
+          if (sub.images && sub.images.length) html += renderExperienceFigures(sub.images);
         });
       }
       html += '</section>';

@@ -6,8 +6,8 @@
       "organization": "BYU Finance Program",
       "dateRange": "Jun 2026 – Present",
       "location": "Provo, UT",
-      "summary": "Designed and built an internal alumni-management platform (CRM) for the BYU finance program—centralizing alumni records, tracking engagement, and supporting outreach—built with Next.js, FastAPI, and a Supabase-hosted PostgreSQL database and deployed on Vercel.",
-      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "PostgreSQL", "Supabase", "SQLAlchemy", "Vercel", "GitHub Actions"],
+      "summary": "Built and run the Finance program's alumni CRM: 2,300+ records, used daily, replacing scattered spreadsheets with one deduplicated source of truth. Built with Next.js, FastAPI, and Supabase (PostgreSQL), deployed on Vercel.",
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "PostgreSQL", "Supabase", "SQLAlchemy", "Resend", "Vercel", "GitHub Actions"],
       "featured": true,
       "sections": [
         {
@@ -15,6 +15,29 @@
           "paragraphs": [
             "Designed and built an internal alumni-management platform (a custom CRM) for the BYU finance program to centralize alumni records, track engagement, and support outreach. The application is deployed on Vercel across separate development and production environments and is used by program staff to manage the alumni database.",
             "As the sole developer, I own the full stack: a TypeScript/Next.js frontend, a Python/FastAPI backend, and a Supabase-hosted PostgreSQL database with Supabase Auth for login and role-based access control."
+          ]
+        },
+        {
+          "title": "Impact",
+          "list": [
+            "Replaced a generic platform and scattered Excel spreadsheets with a single source of truth for 2,300+ alumni records, ending the duplicate, outdated, and inconsistent data spread across the department.",
+            "Used daily by Finance program staff, with access expanding to faculty and students.",
+            "Built automated alumni survey outreach through Resend so alumni update their own records. About 25% of alumni (~575) have responded so far, keeping the data current without manual entry by staff.",
+            "Turned record updates that used to take staff hours into a validated, deduplicated import and survey workflow."
+          ]
+        },
+        {
+          "title": "System Architecture",
+          "images": [
+            {
+              "src": "assets/img/projects/finance-alumni/architecture.jpg",
+              "alt": "Architecture diagram of the BYU Finance Program Alumni Engagement Platform: finance staff, alumni, and faculty reach a Next.js 15 frontend through authenticated, role-based access; the frontend sends API requests to a FastAPI backend that handles authentication, data validation, alumni search and updates, and engagement workflows; the backend reads and writes a Supabase PostgreSQL database holding alumni profiles, event attendance, outreach status, employer information, and interaction history. Key capabilities: alumni lookup, profile updates, event management, and outreach.",
+              "caption": "Next.js frontend → FastAPI backend → Supabase (PostgreSQL). Tap the diagram to open it full size.",
+              "width": 1280,
+              "height": 853,
+              "loading": "lazy",
+              "fullSizeLink": true
+            }
           ]
         },
         {
@@ -43,7 +66,7 @@
       "organization": "BYU Silver Fund",
       "dateRange": "Nov 2025 – Present",
       "location": "Provo, UT",
-      "summary": "Run the fund's financial data infrastructure: automated pipelines across Linux servers, AWS, and high-performance computing, Slurm job scheduling for resource-intensive workloads, and pipeline monitoring with Slack failure alerts that keep production data reliable.",
+      "summary": "Engineer on the analytics platform behind $5.2M in student-managed assets across four funds, used weekly in class. Led its redesign and built monitoring that catches data issues about every two weeks.",
       "technologies": ["Python", "Linux", "Slurm", "AWS", "PostgreSQL", "FastAPI", "Polars", "React", "TypeScript", "AWS Amplify", "Figma", "AWS Bedrock"],
       "featured": true,
       "logoPath": "assets/img/logos/silverfund.png",
@@ -53,10 +76,18 @@
           "title": "Overview",
           "paragraphs": [
             "BYU Silver Fund is one of the oldest and largest student-run investment funds in the United States, managed entirely by students across finance, accounting, economics, mathematics, and computer science under faculty supervision in the Marriott School of Business. Students conduct original research, make live investment decisions, and are directly accountable for fund performance. Alumni of the program have gone on to leadership roles across top firms in the finance industry.",
-            "As a Full Stack Engineer, I maintain and extend a production-grade investment analytics platform that supports multiple student-managed funds, including an undergraduate fundamental fund, a graduate fundamental fund, and a quantitative fund. The platform is used weekly by portfolio managers and analysts to evaluate performance, analyze time-series data, and support investment decisions.",
+            "As a Full Stack Engineer, I maintain and extend a production-grade investment analytics platform that supports four student-managed funds: the Undergraduate, Graduate, Brigham Capital, and Quant funds. The platform is used weekly by portfolio managers and analysts to evaluate performance, analyze time-series data, and support investment decisions.",
             "I also serve as a developer on the Silver Fund Quant Fund team, managing financial data infrastructure and automated pipelines across Linux servers, AWS, and high-performance computing systems, and supporting the AI system development and document-processing infrastructure used for internal financial research and knowledge management."
           ],
           "overviewLink": { "url": "https://silverfund.byu.edu", "text": "BYU Silver Fund" }
+        },
+        {
+          "title": "Impact",
+          "list": [
+            "Maintain the analytics platform behind $5.2M in student-managed assets across four funds (Undergraduate, Graduate, Brigham Capital, and Quant), used weekly in the funds' classes.",
+            "Led the platform redesign from Figma prototypes to production React/TypeScript. It launched last semester and is now the live platform.",
+            "Built website data monitoring with Slack alerts that catches about one issue every two weeks (Yahoo Finance API failures and bad data), so problems surface before anyone acts on wrong numbers."
+          ]
         },
         {
           "title": "Key Responsibilities",
@@ -97,7 +128,7 @@
             {
               "title": "Platform Redesign Initiative",
               "paragraphs": [
-                "Leading the redesign of the Silver Fund analytics platform beginning with interface planning and prototyping in Figma, followed by full frontend implementation in TypeScript and React. The redesign focuses on improving usability, visual hierarchy, responsiveness, and clarity across investment dashboards used by portfolio managers and analysts."
+                "Led the redesign of the Silver Fund analytics platform, from interface planning and prototyping in Figma to full frontend implementation in TypeScript and React. The redesign launched last semester and focused on improving usability, visual hierarchy, responsiveness, and clarity across investment dashboards used by portfolio managers and analysts."
               ],
               "list": [
                 "Redesigned analytics views including performance metrics, benchmark comparisons, holdings displays, and chart layouts to create a cleaner and more intuitive fintech-style user experience.",

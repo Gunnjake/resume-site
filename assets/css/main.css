@@ -1611,8 +1611,11 @@ a.inline-link:hover { text-decoration: underline; }
 }
 .experience-feature-grid img {
   aspect-ratio: auto;
+  height: auto;
   object-fit: contain;
 }
+.experience-feature-grid figure { min-width: 0; margin: 0; }
+.figure-link { display: block; }
 .feature-grid figcaption,
 .media-caption {
   font-size: var(--text-sm);
